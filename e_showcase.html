@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>E showcase</title>
+	<link rel="stylesheet" href="">
+	
+	<!--bootstrap cdn-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<!--bootstrap cdn end-->
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+	<!--owl carousel-->
+	<link rel="stylesheet" type="text/css" href="OwlCarousel2-2.3.4\dist\assets\owl.carousel.css">
+	<link rel="stylesheet" type="text/css" href="OwlCarousel2-2.3.4\dist\assets\owl.theme.default.min.css">
+	<script src="OwlCarousel2-2.3.4\docs\assets\vendors\jquery.min.js" type="text/javascript" ></script>
+	<script src="OwlCarousel2-2.3.4\dist\owl.carousel.js" type="text/javascript" r></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+	<!--owl carousel end--->
+
+
+	<!-- flicker CSS -->
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+	<!-- flicker JavaScript -->
+	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+	<script src="owl_develop.js" type="text/javascript" ></script>
+
+
+	<!--external style-->
+		<!--popup screen css
+			<link rel="stylesheet" type="text/css" href="popupscreen.css">-->
+			<style>
+
+
+				/*----------------------------------------*/
+/* Template default CSS
+/*----------------------------------------*/
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i|Playfair+Display:400,400i,700,700i&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+html,
+body{
+	height: 100%;
+	font-family: "Open Sans", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	font-family: cursive;
+	font-family:adobe-clean,Source Sans Pro,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;
+	background: rgb(20, 83, 154);
+	background: #2B60DE;
+	margin: 0;
+	color: white;
+}
+
+
+/*navbar menu style*/
+
+
+
+#navbar-container {
+	background: rgb(20, 83, 154);
+}
+
+.navbar-nav li {
+	display: block;
+	margin-right: 50px;
+	position: relative;
+}
+
+.navbar-nav li>a {
+	display: block;
+	padding-bottom: 5px;
+	font-size: 16px;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: #fff;
+	color: white!important;
+}
+
+
+/*footer text style*/
+.footer-social p {
+	font-size: 15px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 0px;
+}
+
+.footer-social i {
+	margin-right: 5px;
+}
+
+/*footer text style end*/
+
+/* white color text and same background for all*/
+
+.contact-form, .block.animatable, .block.animated  {
+	background: transparent;
+}
+
+
+
+.header-content h5, .header-content h6, .header-content h1 {
+	color: white;
+}
+
+.section-title h2, li, .block h6, .ri-text h4, .block p , .footer-social, .footer-social h5 {
+	color: white;
+
+}
+
+
+.header-content  .text-white.text-center{
+	background-color: rgba(0,0,0,0.5); 
+}
+
+.hint-text {
+	color: black!important;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+	font-family:adobe-clean,Source Sans Pro,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif!important;
+}
+
+/*eshowcase style*/
+
+/*e-showcase start*/
+
+* {
+	box-sizing: border-box;
+}
+
+
+.wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+	/*min-height: 100vh;*/
+}
+
+.header {
+	color: white;
+	letter-spacing: 3px;
+}
+
+@media all and (max-width: 812px) {
+	.header {
+		font-size: 20px;
+	}
+}
+
+.filter-categories {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.filter-categories span {
+	padding: 0.25rem 0;
+	white-space: nowrap;
+}
+
+.filter-label {
+	display: block;
+	/* allow bottom and top margin to be set (push away filter labels above or below) */
+	margin-right: 1em;
+	padding: 0.5rem 0.5rem;
+	border-radius: 0.25rem;
+	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+	background: #ffe600;
+	transition: all 0.3s ease 0s;
+	font-size: 0.8rem;
+}
+
+.filter-label:hover {
+	cursor: pointer;
+	background: #ffc400;
+}
+
+@media all and (max-width: 812px) {
+	.filter-label {
+		font-size: 0.6rem;
+	}
+}
+
+.filter-input {
+	position: absolute;
+	/* align over label.. good for better for accessibilty on some touch devices for discoverability. https://css-tricks.com/the-checkbox-hack/ */
+	display: flex;
+	z-index: 1;
+	opacity: 0;
+	/* hide */;
+}
+
+.filter-input:checked + label {
+	background-color: orange;
+	transform: translateX(3px);
+	box-shadow: none;
+}
+
+.filter-wrap {
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, 200px);
+	grid-auto-flow: row;
+	grid-gap: 20px;
+	justify-content: center;
+	margin: 0;
+	padding: 1rem;
+	font-size: 75%;
+}
+
+@media all and (max-width: 812px) {
+	.filter-wrap {
+		grid-template-columns: repeat(auto-fit, 100px);
+		grid-gap: 10px;
+		font-size: 50%;
+	}
+}
+
+.filter-item {
+	position: relative;
+	border-radius: 5px;
+	background-color: #d8d8d8;
+	box-shadow: 5px 7px 6px black;
+}
+
+.filter-item:hover {
+	transition: all 0.9s ease both;
+}
+
+.img-container {
+	overflow: hidden;
+	border-radius: 5px 5px 0 0;
+}
+
+.filter-item img {
+	width: 100%;
+	height: 166.75px;
+	object-fit: cover;
+	/* crops image top and bottom in this case */
+	cursor: pointer;
+	transition: all 0.9s ease;
+}
+
+@media all and (max-width: 812px) {
+	.filter-item img {
+		height: 83.375px;
+	}
+}
+
+.img-adjust-1 {
+	object-position: 0;
+}
+
+.img-adjust-2 {
+	object-position: 100% 100%;
+}
+
+.hover-center:hover {
+	transform: scale(1.2);
+}
+
+.hover-top-left:hover {
+	transform: scale(1.2);
+	object-position: -70% -40%;
+}
+
+.hover-bottom-right:hover {
+	transform: scale(1.2);
+	object-position: 110% 120%;
+}
+
+.hover-bottom-left:hover {
+	transform: scale(1.2);
+	object-position: -50% -40%;
+}
+
+.hover-left:hover {
+	transform: scale(1.2);
+	object-position: -10% 50%;
+}
+
+.grid-card-text {
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	line-height: 5px;
+	color: black;
+}
+
+@media all and (max-width: 812px) {
+	.grid-card-text {
+		padding-top: 5px;
+		padding-left: 5px;
+		padding-right: 5px;
+		line-height: 3.3px;
+	}
+}
+
+.common-name {
+	font-size: 17px;
+	font-weight: 600;
+	line-height: 1.2em;
+}
+
+@media all and (max-width: 812px) {
+	.common-name {
+		font-size: 10px;
+		line-height: 1.5em;
+		margin-bottom: 8px;
+	}
+}
+
+.scientific-name {
+	font-size: 15px;
+	line-height: 20px;
+	font-style: italic;
+}
+
+@media all and (max-width: 812px) {
+	.scientific-name {
+		height: 30px;
+		font-size: 10px;
+		line-height: 1.5em;
+	}
+}
+
+.img-container {
+	position: relative;
+}
+
+.img-container img {
+	display: block;
+}
+
+.img-container .fa-exclamation-triangle {
+	position: absolute;
+	color: #ffe600;
+	background-color: red;
+	border-radius: 3px;
+	border: 4px solid red;
+	top: 0px;
+	right: 0px;
+}
+
+@media all and (max-width: 812px) {
+	.img-container .fa-exclamation-triangle {
+		font-size: 8px;
+	}
+}
+
+.filtered-inclusive .filter-item, .filtered-exclusive .filter-item, .filter-no-item {
+	display: none;
+}
+
+/* filtered-inclusive/filtered-exclusive class applied via js */
+.filtered-inclusive .filter-item.selected, .filtered-exclusive .filter-item:not(.selected) {
+	display: block;
+}
+
+/* filtered-inclusive/filtered-exclusive class applied via js */
+.filter-no-item.filter-no-item-active {
+	/* message stating no filter results */
+	display: block;
+	width: 100%;
+	background: #d8d8d8;
+	padding: 1em 1.5em;
+	margin: 0.75%;
+	border-radius: 0.25rem;
+	line-height: 1.2rem;
+}
+
+@media all and (max-width: 812px) {
+	.filter-no-item.filter-no-item-active {
+		line-height: 0.8rem;
+	}
+}
+
+.filter-mask-active {
+	/* cover each card (animation effect) */
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+	background-color: #0a0a0a;
+	animation: filterMask 1s ease-in;
+}
+
+@keyframes filterMask {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+.filter-no-item-active {
+	animation: filterMaskNoItems 1s ease-in;
+}
+
+@keyframes filterMaskNoItems {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+
+
+/* register button*/
+#register_button {
+	width:100%;
+	padding: 10px 10px;
+	background:#2691d9;
+	border:1px solid;
+	border-radius: 25px;
+	font-size:18px;
+	color: #e9f4fb;
+	font-weight:700;
+	cursor:pointer;
+	outline:none;
+	border: none;
+
+}
+
+#register_button:hover {
+	border-color:#2691d9;
+	transition: .5s;
+}
+
+/*e-showcase end*/
+
+.form-control {
+	max-width: 150px;
+}
+
+
+.copyright a {
+	color: white;
+}
+
+
+.navbar-inverse .navbar-toggle {
+	border-color: #333;
+	margin-top: -14px;
+}
+
+.rec_prod img {
+	width: 300px;
+	height: 200px;
+}
+
+
+
+</style>
+
+
+</head>
+<body>
+
+	
+	<!--navbar-->
+	<nav class="navbar navbar-inverse" style="	background: #2B60DE; background: rgb(20, 83, 154); padding: 0px 0px; border: none; padding-bottom: 0px;">
+		<div class="navbar-header" style="margin-left: 5px;">
+			<a class="navbar-brand" href="#"><img class="imgusrst img-circle shadow" src="images/logo.png" alt="Demo_logo" / style="width: 80px; display: inline;"> 			
+				<span class="text-uppercase " style="font-size: 23px; font-weight: bold; color: white; border: none; ">
+				</span>
+			</a>
+		</div>
+
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" style="border: none;">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="collapsibleNavbar" style="margin: 30px 0px; border: none;">
+			<ul class=" nav navbar-nav navbar-right">
+				<li class="nav-item">
+					<a class="nav-link" href="reception_demo8.html">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#about">About</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#feature">Features</a>
+				</li>   
+
+				<li class="nav-item">
+					<a class="nav-link" href="#exhibitor">Exhibitors</a>
+				</li>
+
+
+				<li class="nav-item">
+					<a class="nav-link" href="#sponsor">Sponsors</a>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="https://utradefair.home.blog/" target="_blank">Blog</a>
+				</li>  
+			</ul>
+		</div>  
+	</nav>
+	<!--navbar end-->
+
+
+
+	<div class="container" style="margin-top: 0px; padding-top: 0px;">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-0" style="margin:0px 0;">
+			
+
+			<ul class="navbar-nav mr-auto ">
+				<li class="nav-item">
+					<div class=""><button class="" id="register_button" type="submit" style="width: 100px;">Back</button></div>
+				</li>
+
+			</ul>
+			<form class="form-inline my-2 my-lg-0 navbar-right">
+				<input class="form-control mr-sm-2" type="text" placeholder="Search">
+				<button class="btn btn-success my-2 my-sm-0" type="button">Search</button>
+			</form>
+
+		</nav>
+
+
+	</div>
+
+	<div class="container"><h3 class="header ml-3">Water today's Virtual water expo</h3></div>
+
+
+	<div class="container-fluid ">
+		<div class="wrapper">
+			<main id="gridCardsWithFilter">
+
+				
+
+				<!-- Gallery of grid-cards -->
+				<section class="filter-wrap">
+					<div class="filter-item venomous common durban">                            
+						<div class="img-container">
+							<a href="#">   
+								<img class="hover-center" src="images/wastewater.jpg" alt="INR - 2000"><i class="fas fa-exclamation-triangle fa-2x"></i>
+							</a>
+						</div>
+						<div class="grid-card-text">
+							<h1 class="scientific-name">
+								Waster Water treatment Plant
+							</h1>
+							<p class="common-name">INR - 200000</p>
+						</div>
+						<div class="filter-mask"></div> <!-- mask is last -->
+					</div>
+
+					<div class="filter-no-item">Sorry, no snakes match your filter selections.</div>
+				</section>
+
+			</main>
+		</div>
+	</div>
+
+	<div class="container" style="margin-bottom: 30px;">
+		<div class="row">
+			<div class="col-lg-12">
+				<h4>Description</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+		</div>
+
+		<!--<div class="row">
+			<h3>Recommended Products</h3>
+			<div class="col-lg-4">
+				<div class="rec_prod">
+					<img class="img-responsive" src="images/water-treatment.jpg" alt="">
+				</div>
+			</div>
+
+			<div class="col-lg-4">
+				<div class="rec_prod">
+					<img class="img-responsive" src="images/zero-liquid.jpg" alt="">
+				</div>
+			</div>
+
+			<div class="col-lg-4">
+				<div class="rec_prod">
+					<img class="img-responsive" src="images/membrane.png" alt="">
+				</div>
+			</div>
+		</div>-->
+
+		<div class="wrapper">
+			<main id="gridCardsWithFilter">
+
+				
+
+				<!-- Gallery of grid-cards -->
+				<section class="filter-wrap">
+					<div class="filter-item venomous common durban">                            
+						<div class="img-container">
+							<a href="#">   
+								<img class="hover-center" src="images/membrane.png" alt="INR - 2000"><i class="fas fa-exclamation-triangle fa-2x"></i>
+							</a>
+						</div>
+						<div class="grid-card-text">
+							<h1 class="scientific-name">
+								Waster Water treatment Plant
+							</h1>
+							<p class="common-name">INR - 200000</p>
+						</div>
+						<div class="filter-mask"></div> <!-- mask is last -->
+					</div>
+
+					<div class="filter-item venomous common durban">                            
+						<div class="img-container">
+							<a href="#">   
+								<img class="hover-center" src="images/water-treatment.jpg" alt="INR - 2000"><i class="fas fa-exclamation-triangle fa-2x"></i>
+							</a>
+						</div>
+						<div class="grid-card-text">
+							<h1 class="scientific-name">
+								Waster Water treatment Plant
+							</h1>
+							<p class="common-name">INR - 200000</p>
+						</div>
+						<div class="filter-mask"></div> <!-- mask is last -->
+					</div>
+
+					<div class="filter-item venomous common durban">                            
+						<div class="img-container">
+							<a href="#">   
+								<img class="hover-center" src="images/zero-liquid.jpg" alt="INR - 2000"><i class="fas fa-exclamation-triangle fa-2x"></i>
+							</a>
+						</div>
+						<div class="grid-card-text">
+							<h1 class="scientific-name">
+								Waster Water treatment Plant
+							</h1>
+							<p class="common-name">INR - 200000</p>
+						</div>
+						<div class="filter-mask"></div> <!-- mask is last -->
+					</div>
+
+					<div class="filter-no-item">Sorry, no snakes match your filter selections.</div>
+				</section>
+
+			</main>
+		</div>
+	</div>
+
+
+
+	<!-- Footer Section -->
+	<footer class="footer-section" style="background: rgb(20, 83, 154);">
+		<div class="container" style=" border-top: 1px solid white;">
+			<div class="footer-bottom">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="row">
+							<div class="col-sm-4   py-4" >
+								<div class="footer-social ml-3" style="padding-top: 10px;">									<a href="" ><img class="imgusrst img-circle shadow" src="https://utradefair.in/assets/utflogo-d537c553ea35c2c5008c92f06b8f7390899c8e4f6952d6e9d13391e0837955f7.jpg" alt="Utflogo" / style="width: 80px;"> </a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+
+					<div class="col-md-4 ">
+						<div class="copyright " style="padding: 10px 0px; color: white;">
+							<a class=" text-white" href="https://www.utfindia.in/" target="_blank" style="color: ;">&copy; UTF Technologies, All Rights Reserved.</a>
+						</div>
+					</div>
+
+					<div class="col-md-4 text-md-right text-center">
+						<div class="row">
+							<div class="col-sm-4 offset-sm-2 py-4 " >
+
+
+							</div>
+
+							<div class="col-sm-6 py-2" >
+								<div class="footer-social text-left">
+									<h5 class="mb-0 mt-2 "></h5>
+									<p><i class="fa fa-building" aria-hidden="true"></i> UTF Technologies</p>					
+									<p><i class="fa fa-envelope" aria-hidden="true"></i>namaste@utfindia.in</p>
+									<p><i class="fa fa-mobile" aria-hidden="true"></i>+91-8884852372</p>
+									<p><i class="fa fa-globe" aria-hidden="true"></i>www.utfindia.in</p>
+								</div>
+							</div>
+						</div>						
+					</div>
+				</div>				
+			</div>
+		</div>
+	</footer>
+	<!-- Footer Section end -->
+
+</body>
+</html>
