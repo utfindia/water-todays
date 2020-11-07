@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Login form</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+	<!--font aweson-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!--owl carousel-->
+	<link rel="stylesheet" type="text/css" href="OwlCarousel2-2.3.4\dist\assets\owl.carousel.css">
+	<link rel="stylesheet" type="text/css" href="OwlCarousel2-2.3.4\dist\assets\owl.theme.default.min.css">
+	<script src="OwlCarousel2-2.3.4\docs\assets\vendors\jquery.min.js" type="text/javascript" ></script>
+	<script src="OwlCarousel2-2.3.4\dist\owl.carousel.js" type="text/javascript" r></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+	<!--owl carousel end--->
+	
+	<link rel="stylesheet" href="">
+	<style>
+
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			background-image: url(images/auditorium.jpg);
+		}
+
+		.navbar-brand > img {
+			max-height: 100%;
+			height: 100%;
+			-o-object-fit: contain;
+			object-fit: contain;			
+		}
+
+		/*Navbar style*/
+
+		.navbar.navbar-inverse {
+			padding: 0px 0px;
+		}
+
+		.navbar .navbar-brand img {
+			max-width: 80px;
+		}
+
+		.navbar-brand {
+			margin: 0;
+			padding: 0px 0px ;
+
+		}
+
+		.navbar > .container-fluid .navbar-brand {
+			margin-left: 52px;
+		}
+
+		.nav>li {
+
+			background-color: #4a8bff;
+			margin: 1px 10px 1px 11px;
+			padding: 0px 5px 0px 6px;
+			color: #fff;
+		}
+
+/*.navbar-nav li {
+	display: inline-block;
+	margin-right: 50px;
+	position: relative;
+	} */
+
+	.navbar-nav li>a {
+		display: block;
+		padding-bottom: 5px;
+		padding-top: 5px;
+		font-size: 12px;
+		font-weight: 400;
+		text-transform: uppercase;
+		color: #fff;
+		color: white!important;
+	}
+
+	.navbar .dropdown-menu a {
+		color: black!important;
+	}
+
+	.collapse.navbar-collapse {
+		margin-top: 10px;
+	}
+
+
+	/***new marquee style***/
+	.marquee-container {
+		width: 18em;
+		height: 18em;
+		margin: 1em auto;
+		overflow: hidden;
+		background: white;
+		position: relative;
+		box-sizing: border-box;
+	}
+
+	.marquee {
+		top: 6em;
+		position: relative;
+		box-sizing: border-box;
+		animation: marquee 15s linear infinite;
+	}
+
+	.marquee:hover {
+		animation-play-state: paused;
+	}
+
+	/* Make it move! */
+	@keyframes marquee {
+		0%   { top:   8em }
+		100% { top: -11em }
+	}
+
+	@keyframes marquee {
+		0%   { top:   2em }
+		100% { top: -28em }
+	}
+
+	/* Make it look pretty */
+	.microsoft .marquee {
+		margin: 0;
+		padding: 0 1em;
+		padding: 0 0.1em;
+		line-height: 1.5em;
+		font: 1em 'Segoe UI', Tahoma, Helvetica, Sans-Serif;
+	}
+
+	.microsoft:before, .microsoft::before,
+	.microsoft:after,  .microsoft::after {
+		left: 0;
+		z-index: 1;
+		content: '';
+		position: absolute;
+		pointer-events: none;
+		width: 100%; height: 2em;
+		background-image: linear-gradient(top, #FFF, rgba(255,255,255,0));
+	}
+
+	.microsoft:after, .microsoft::after {
+		bottom: 0;
+		transform: rotate(180deg);
+	}
+
+	.microsoft:before, .microsoft::before {
+		top: 0;
+	}
+
+	/* Style the links */
+	.vanity {
+		color: #333;
+		text-align: center;
+		font: .75em 'Segoe UI', Tahoma, Helvetica, Sans-Serif;
+	}
+
+	.vanity a, .microsoft a {
+		color: #1570A6;
+		transition: color .5s;
+		text-decoration: none;
+	}
+
+	.vanity a:hover, .microsoft a:hover {
+		color: #F65314;
+	}
+
+	/* Style toggle button */
+	.toggle {
+		display: block;
+		margin: 2em auto;
+	}
+
+	.gold_sponser_table_01 img {
+		width: 100px;
+		height: 80px;
+		border: 4px solid orange;
+	}
+
+
+	/***youtube video  size style********/
+	/*.you_tubee iframe {
+		width: 200px;
+		height: 100px;
+		}*/
+
+		.you_tubee {
+			position: absolute;
+			top: 16rem;
+			right: 1vw;
+		}
+
+		@media screen and (max-width: 600px) {
+			.you_tubee iframe {
+				width: 90%;
+				height: 140px;
+			}
+		}
+
+
+		/***slider style***/
+
+		/*sponsors and banner style*/
+		.gold_sponser {
+			width: 100%;
+			width: 85%;
+			width: 72%;
+			height: 245px;
+			height: auto;	
+			z-index: 999;
+			margin: 0 auto;
+	/*position: absolute;
+	left: 0;
+	right: 72.5%;
+	top: 29%;
+	margin-left:9%;
+	margin-top: 17%;*/
+	background-color: #1c726f;
+	background-image: linear-gradient(#19706d, #19706d);
+
+	background-color: #a40606;
+	background-image: linear-gradient(315deg, #a40606 0%, #d98324 74%);
+	background-image: url(images/slider_back2.jpg);
+
+
+
+	padding:5px;
+	border-top:2px solid #4889fd;
+}
+
+.gold_sponser {
+	position: relative;
+	right: 43%;
+	top: 16vh;
+}
+
+@media screen and (max-width: 600px) {
+	.gold_sponser {
+		position: static!important;
+		margin-bottom: 20px;
+		width: 100%;
+	}
+}
+
+
+
+
+.gold_sponser:hover {	
+	-ms-transform: scale(1.1); /* IE 9 */
+	-webkit-transform: scale(1.1); /* Safari 3-8 */
+	transform: scale(1.1); 
+	transition: transform .5s ease;
+}
+
+@media screen and (max-width: 600px) {
+	.gold_sponser:hover {
+		-ms-transform: scale(1); /* IE 9 */
+		-webkit-transform: scale(1); /* Safari 3-8 */
+		transform: scale(1);		
+	}
+}
+
+.gold_sponserxx {
+	width: 100%;
+	height: 245px;
+	/*position: absolute;
+	z-index: 999;
+	margin: 0 auto;
+	left: 0;
+	right: 72.5%;
+	top: 29%;
+	margin-left: 9.4%;
+	margin-top: 18%;*/
+	background-color: #1c726f;
+	background-image: linear-gradient(#19706d, #19706d);
+	padding: 5px;
+}
+
+
+.gold_sponser_table {
+	width: 100%;
+	height: auto;
+	float:left; 
+	float: none; 
+
+}
+
+.gold_sponser_table .marquee {
+	overflow-x:-webkit-marquee;
+	-webkit-marquee-direction: up;
+	-webkit-marquee-style: scroll;
+	-webkit-marquee-speed: fast;
+	-webkit-marquee-increment: small;
+	-webkit-marquee-repetition: infinite;
+}
+
+@media only screen and (max-width: 600px) {	
+	.gold_sponser_table_01.grow img {
+		width: 70%;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.gold_sponser_table h1
+{
+	font-size: 14px;
+	text-align: center;
+	color: #fcde48;
+	font-weight:bold;
+	margin-top: 10px;
+}
+
+.gold_sponser_table_01
+{
+	width: 100%;
+	height: auto;
+	float:left;   
+	padding: 3px;
+}
+
+
+
+
+.gold_sponser_table_01:hover {
+	-ms-transform: scale(1.1); /* IE 9 */
+	-webkit-transform: scale(1.1); /* Safari 3-8 */
+	transform: scale(1.1); 
+	width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+	.gold_sponser_table_01:hover {
+		-ms-transform: scale(1); /* IE 9 */
+		-webkit-transform: scale(1); /* Safari 3-8 */
+		transform: scale(1);		
+	}
+}
+
+
+
+.grow img {
+	width: 100%;
+	text-align:center;
+	margin:0 auto;
+}
+
+.gold_sponser_table p
+{
+	font-size: 14px;
+	color: #fff;
+	padding-left: 15px;
+	padding-right: 12px;
+	margin-top: -2px;
+}
+
+
+.new_arrival {
+	width: 100%;
+	width: 85%;
+	width: 72%;
+	height: auto;
+	margin: 0 auto;
+	/*position: absolute;
+	z-index: 999;
+	
+	left: 0;
+	right: 45.1%;
+	top: 21%;*/
+	background-color:#1e56b7;
+	background-color: #0cbaba;
+	background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+	background-image: url(images/slider_back.jpg);
+
+
+	padding:5px;
+	border-top:2px solid #4889fd;
+}
+
+#new-arrival .owl-dots, #product-slider .owl-dots, #gold .owl-dots, #sponsor .owl-dots {
+	display: none;
+}
+
+
+.new_arrival {
+	position: relative;
+	top: 26vh;
+	left: -69%;
+} 
+
+@media screen and (max-width: 600px) {
+	.new_arrival {
+		position: static!important;	
+		margin-bottom: 20px;
+		width: 100%;		
+	}
+}
+
+.new_arrival:hover {
+	-ms-transform: scale(1.1); /* IE 9 */
+	-webkit-transform: scale(1.1); /* Safari 3-8 */
+	transform: scale(1.1); 
+	transition: transform .5s ease;
+}
+
+@media screen and (max-width: 600px) {
+	.new_arrival:hover {
+		-ms-transform: scale(1); /* IE 9 */
+		-webkit-transform: scale(1); /* Safari 3-8 */
+		transform: scale(1); 
+		transition: transform .5s ease;
+	}
+}
+
+.new_arrival h1 {
+	font-size: 14px;
+	text-align: center;
+	color: #fcde48;
+	font-weight:bold;
+	margin-top: 13px;
+}
+
+.new_arrival p {
+	font-size: 14px;
+	color: #fff;
+	padding-left: 15px;
+	padding-right: 12px;
+	margin-top: -2px;
+}
+.new_arrival_img {
+	width: 100%;
+	height: auto;
+	float:left;
+}
+
+.new_arrival_img img {
+	width: 100%;   
+}
+
+@media only screen and (max-width: 600px) {	
+	.gold_sponser_table_01 img {
+		width: 70%;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+
+.products {
+	width: 100%;
+	width: 72%;
+	height: auto;
+	/*position: absolute;
+	z-index: 999;
+	margin: 0 auto;
+	left: 47%;
+	right: 0%;
+	top: 21.9%;*/
+	background-color:#1e56b7;
+
+	background-color: #a40606;
+	background-image: linear-gradient(315deg, #a40606 0%, #d98324 74%);
+	background-image: url(images/slider_back2.jpg);
+
+	padding:5px;
+	border-top:2px solid #4889fd;
+}
+
+.products {
+	position: relative;
+	top: 16vh;
+	left: 40%;
+	margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+	.products {
+		position: static;
+		margin-bottom: 20px;
+		width: 100%;
+	}
+}
+
+.products:hover {
+	-ms-transform: scale(1.1); /* IE 9 */
+	-webkit-transform: scale(1.1); /* Safari 3-8 */
+	transition: transform .5s ease;
+	transform: scale(1.1); 
+}
+
+@media screen and (max-width: 600px) {
+	.products:hover {
+		-ms-transform: scale(1); /* IE 9 */
+		-webkit-transform: scale(1); /* Safari 3-8 */
+		transform: scale(1); 
+		transition: transform .5s ease;
+	}
+}
+
+.products h1 {
+	font-size: 14px;
+	text-align: center;
+	color: #fcde48;
+	font-weight:bold;
+	margin-top: 13px;
+}
+
+.products p
+{
+	font-size: 14px;
+	color: #fff;
+	padding-left: 15px;
+	padding-right: 12px;
+	margin-top: -2px;
+}
+
+.products_img {
+	width: 100%;
+	height: auto;
+	float:left;
+}
+
+.products_img img {
+	width: 100%; 
+
+}
+
+
+.silver_sponser {
+	width: 100%;
+	width: 72%;
+	height: auto;
+	margin: 0 auto;
+	/*position: absolute;
+	z-index: 999;
+
+	left: 71.5%;
+	right: 0;
+	top: 29%;
+	margin-left: 9.4%;
+	margin-top: 17%;
+	background-image: linear-gradient(#19706d, #19706d);*/
+	background-color: #1c726f;
+	background-color: #0cbaba;
+	background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+	background-image: url(images/slider_back.jpg);
+
+	padding:5px;
+	border-top:2px solid #4889fd;
+}
+
+
+.silver_sponser {
+	position: relative;
+	left: 69%;
+	top: 28vh;
+}
+
+@media screen and (max-width: 600px) {
+	.silver_sponser {
+		position: static;
+		margin-bottom: 20px;
+		width: 100%;		
+	}
+}
+
+.silver_sponser:hover {	
+	-ms-transform: scale(1.1); /* IE 9 */
+	-webkit-transform: scale(1.1); /* Safari 3-8 */
+	transform: scale(1.1); 
+	transition: transform .5s ease;
+}
+
+
+@media screen and (max-width: 600px) {
+	.silver_sponser:hover {
+		-ms-transform: scale(1); /* IE 9 */
+		-webkit-transform: scale(1); /* Safari 3-8 */
+		transform: scale(1); 
+		transition: transform .5s ease;
+	}
+}
+
+.silver_sponservvv
+{
+	width: 100%;
+	height: 52px;
+	/*position:relative;
+	z-index: 999;
+	margin: 0 auto;
+	left: 7%;
+	right: 0;
+	top: 2%;
+	margin-left: 9.4%;
+	margin-top: 17%;*/
+	background-color:red;
+}
+
+.silver_sponser_table {
+	width: 100%;
+	height: auto;	
+}
+
+
+.silver_sponser_table h1 {
+	font-size: 14px;
+	text-align: center;
+	color: #fff;
+	font-weight:bold;
+	margin-top: 5px;
+	color: #fcde48;
+}
+
+.silver_sponser_table_01
+{
+	width: 100%;
+	height: auto;
+	float:left;   
+	padding: 3px;
+}
+
+
+.silver_sponser_table_01 img {
+	width: 100%;
+}
+
+
+.moving_banner {
+	width: 100%;
+	height: auto;
+	/*position: absolute;
+	z-index: 999;
+	margin: 0 auto;
+	left: 0px;
+	right: 0%;
+	top: 33.2%;*/
+
+	position: relative;
+	top: 35px;
+	right: 3vw;
+}
+
+@media screen and (max-width: 600px) {
+	.moving_banner {
+		position: static;
+	}
+}
+
+.moving_banner h1 {
+	font-size: 18px;
+	text-align: center;
+	color: #fff;
+}
+
+.moving_banner p
+{
+	font-size: 14px;
+	color: #fff;
+	padding-left: 15px;
+	padding-right: 12px;
+	margin-top: -2px;
+	width: 100%;
+}
+
+.moving_bannerv p:hover {
+	-ms-transform: scale(1.1); /* IE 9 */
+	-webkit-transform: scale(1.1); /* Safari 3-8 */
+	transform: scale(1.1); 
+	width: 100%;
+}
+
+.moving_banner img {
+	width: 40%;
+	height: 110px;
+	height: auto;
+	display: block;
+	margin: 0px auto;
+}
+
+@media screen and (max-width: 600px ) {
+	.moving_banner img {
+		width: 100%;
+		height: 150px;
+	}
+}
+
+.moving_banner img:hover {	
+	-ms-transform: scale(1.1); /* IE 9 */
+	-webkit-transform: scale(1.1); /* Safari 3-8 */
+	transform: scale(1.1); 
+	transition: transform .5s ease;
+	z-index: 999;
+}
+
+
+@media screen and (max-width: 600px) {
+
+	.moving_banner img:hover {
+		-ms-transform: scale(1); /* IE 9 */
+		-webkit-transform: scale(1); /* Safari 3-8 */
+		transform: scale(1);		
+	}
+}
+
+
+</style>
+</head>
+<body>
+	<!--navbar section-->
+	<nav class="navbar  navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>                        
+				</button>
+				<a class="navbar-brand" href="#"><img class="img-responsive shadow" src="images/logo.png" alt="logo" style="border-radius: 50%;"></a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav navbar-right">
+					<li class=""><a href="javascript:void(0);">About us</a></li>
+					<li><a href="exhibition_hall.html">Exhibition</a></li>
+					<li><a href="auditorium.html">Conference</a></li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="">B2B Meeting 
+							<!--<span class="caret"></span></a>-->
+							<ul class="dropdown-menu">
+								<li><a href="#">Dashboard</a></li>
+								<li><a href="#">Profile</a></li>
+								<li><a href="#">Logout</a></li>
+							</ul>
+						</li>					
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!--navbar section end-->
+
+		<!--middle sectionn of sponsor,new arrival , bannner and product-->
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-lg-push-4 " style="padding: 0px;">
+
+					<div class="moving_banner" ><!-- announcement start -->
+						<img src="images\logo1.jpg" style="border: 0px solid red;">
+					</div><!-- announcement end -->	
+
+					<div class="you_tubee"><!-- announcement start -->
+						<div >
+							<iframe  style=" border: 5px solid black; display: block; margin: auto; width: 33vw; height: 250px;" src="https://www.youtube.com/embed/2Jyml96z0mU" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+						</div>
+					</div><!-- announcement end -->
+				</div>
+
+				<div class="col-lg-2 col-lg-pull-4 ">
+					<div class="gold_sponser">  
+						<div class="gold_sponser_table">
+							<h1>EXHIBITORS</h1>
+							<div id="gold-marquee" style="/*height:322px; */ overflow:hidden;">
+								<div class="microsoft marquee-container">
+									<div class="marquee">
+										<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+										<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+										<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+										<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+										<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+										<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div><!-- Gold Sponser end -->
+
+
+
+				</div>
+
+				<div class="col-lg-2 col-lg-pull-4 ">
+					<div class="new_arrival"><!-- New Arrival start -->
+						<h1>PRODUCTS</h1>
+						<div id="new-arrival-marquee" style="height:204px; overflow:hidden;">
+							<div class="microsoft marquee-container">
+								<div class="marquee">
+									<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+									<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+									<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+									<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+									<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+									<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+								</div>
+							</div>
+						</div>
+
+
+
+					</div><!-- New Arrival end -->
+				</div>
+
+				<div class="col-lg-2">
+					<div class="silver_sponser"><!-- Diamond Sponser start -->
+						<div class="silver_sponser_table">
+							<h1>NEW ARRIVAL</h1>
+							<div id="sponsor-marquee" style="height:204px; overflow:hidden;">
+								<div class="microsoft marquee-container">
+									<div class="marquee">
+										<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+										<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+										<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+										<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+										<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+										<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+									</div>
+								</div>
+							</div>
+
+
+						</div>
+					</div><!-- Diamond Sponser end -->
+				</div>
+
+
+
+				<div class="col-lg-2">
+					<div class="products"><!-- products start -->
+						<h1>SPONSORS </h1>
+						<div id="product-marquee" style="height:204x; overflow:hidden;">
+							<div class="microsoft marquee-container">
+								<div class="marquee">
+									<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+									<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+									<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+									<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+									<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+									<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+								</div>
+							</div>
+						</div>
+
+						
+					</div><!-- products end -->
+				</div>
+			</div>
+		</div>
+		<!--middle sectionn of sponsor,new arrival , bannner and product end-->
+
+	</body>
+	</html>

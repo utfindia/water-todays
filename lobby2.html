@@ -1,0 +1,3781 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<!--external css-->
+	<link rel="stylesheet" type="text/css" href="popupscreen1.css">
+	<link rel="stylesheet" href="style.css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		.navbar-brand > img {
+			max-height: 100%;
+			height: 100%;
+			-o-object-fit: contain;
+			object-fit: contain;			
+		}
+
+		.you_tubee {
+			position: relative;
+			top: 30px;
+			right: 3vw;
+		}
+
+		.fa.menu_round:hover 	{
+			opacity:1;
+			transition:ease 500ms;
+			margin-top:-40px;
+		}
+
+		/*#gold, #new-arrival,#product-slider, #sponsor {
+			display: none;
+			}*/
+
+			#gold-marquee, #new-arrival-marquee, #product-marquee, #sponsor-marquee {
+				display: none;
+			}
+
+			@media screen and (min-width: 1080px) {
+				#gold, #new-arrival, #product-slider, #sponsor {
+					display: none;
+				}
+
+				#gold-marquee, #new-arrival-marquee, #product-marquee, #sponsor-marquee {
+					display: block;
+				}
+			}
+
+			.owl-carousel  {
+				overflow-x: hidden;
+			}
+
+			.owl-theme .owl-dots {
+				transform: translate(0px, -40px);
+			}
+
+
+			/****banner***/
+			.header{
+				height:45px;
+				width:100%;
+				background-color:#046AA7;
+				padding:20px;
+			}
+			.header-title{
+				color:#fff;
+				line-height:70px;
+				font-size:30px;
+			}
+			.content{
+				/*width:75%;
+				margin:0 auto;
+				background-color:#eee;*/
+				position: relative;
+				left: 10%;
+				bottom: 50px;
+			}
+
+			@media screen and (max-width: 600px) {
+				.content {
+					position: static;
+
+				}
+			}
+
+
+			.posts{
+				width:100%;
+				/*min-height:2000px;*/
+				padding-top:50px;
+				padding-bottom:50px;
+			}
+			.single-post{
+				height:250px;
+				max-width:500px;
+				float:left;
+				margin:0 auto;
+				margin:25px;
+				background-color:#3195D0;
+				margin-bottom:25px;
+			}
+			.single-post:hover{
+				opacity:0.9;
+			}
+			.mod-endorsed{
+				background-color:#FFBB00;
+				background: #3498DB;
+				padding: 20px;
+				border-radius: 10px;
+				color: white;
+				border: 5px dotted white ;
+			}
+			.post-image{
+				float:left;
+				margin-right:5px;
+			}
+			.title{
+				float:left;
+				font-size:22px;
+				width:240px;
+			}
+			.post-meta{
+				float:left;
+				width:240px;
+			}
+
+			/***NEW CLICK HERE STYLE********/
+
+			.card{
+			/*margin-left: auto;
+			margin-right: auto;*/
+			width:470px;
+			
+			margin-top: 5px;
+			left:0;
+			right:0;
+		}
+
+		.card-reverse{
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 20px;
+			width: 500px;
+			background-color: #2091CD;
+			height: auto;
+			left:0;
+			right:0;
+		}
+
+		.flip{
+			backface-visibility: hidden;
+			position:absolute;
+			transform-origin: 50% 50% 0px;
+			transition: all 3s;
+		}
+
+		#side-1 {
+			transform: rotateY( 0deg );
+		}
+
+		#side-2 {
+			transform: rotateY( 180deg );   
+		}
+
+		.flip-side-1 {    
+			transform: rotateY( 0deg ) !important;
+		}
+
+		.flip-side-2 {
+			transform: rotateY( 180deg ) !important;
+		}
+
+		.mozilla-logo-big{
+			width: 315px;
+			height: 150px;
+			margin: auto;
+			vertical-align: middle;
+			display:block;
+			padding-top: 14%;
+			padding-bottom: 14%;
+		}
+
+		.moz-link-reverse{
+			color: white;
+			text-right: right;
+			padding-left: 350px;
+			display: block;
+			margin-bottom: 5%;
+		}
+
+		aside{
+			color:#A0A0A0;
+			color: white;
+		}
+
+		.card-info{
+			border-bottom: 1px solid #2091CD;
+			border-left: 1px solid #2091CD;
+			border-right: 1px solid #2091CD;
+			border-top: 3px solid #2091CD;
+			width: 100%;
+			height:auto;
+		}
+
+		.tabzilla{
+			width: 100px;
+			height: 55px;
+		}
+
+		header{
+			/*padding-left: 375px;*/
+		}
+
+		.other-data{
+			width: 145px;
+			display: inline-block;
+			padding-left: 15px;
+			padding-top: 5px;
+			padding-bottom: 20px;
+			padding-right: 0px;
+		}
+
+		.primary-data{
+			margin-top: 0px;
+			width: 325px;
+			display: inline-block;
+			padding-left: 25%;
+		}
+
+		@media(max-width: 600px) {
+			.primary-data{				
+				padding-left: 0%;
+			}
+		}
+
+		i {
+			color: #000;
+			color: white;
+			margin-right: 4px;
+		}
+
+
+
+		.mozillians-photo{
+			width: 125px;
+			height: 125px;
+			border-radius: 62.5px;
+			-moz-border-radius: 62.5px;
+			border: 5px solid #fff;
+			box-shadow: 0 0 10px gray;
+		}
+
+		.type, .data{
+			text-align: justify;
+		}
+
+		.data, .moz-name{
+			color: #2091CD;
+			font-size: 30px;
+			color: white;
+			font-weight: bold;
+
+		}
+
+		.moz-footer{
+			width: 100%;
+			display: block;
+			background-color: #2091CD;
+			color: white;
+			padding-top: 15px;
+			padding-bottom: 20px;
+			text-align: center;
+		}
+
+		.mozillians-link{
+			margin:0;
+			width:30%;
+			display: inline;
+			padding-top: 0px;
+			padding-right: 10px;
+			padding-left: 20px;
+			padding-bottom: 40px;
+			text-align: center;
+		}
+
+		.mozillians-logo{
+			margin:0;
+			width:40%;
+			display: inline;
+			padding-top: 0px;
+			padding-left: 130px;
+			padding-bottom: 40px;
+			padding-right: 20px;
+		}
+
+		.moz-logo{
+			width:150px;
+			height:35px;
+			vertical-align: middle;
+		}
+
+		/*NEW CLICK HERE STYLE END******/
+
+
+		/***new marquee style***/
+		.marquee-container {
+			width: 18em;
+			height: 18em;
+			margin: 1em auto;
+			overflow: hidden;
+			/*background: white;*/
+			position: relative;
+			box-sizing: border-box;
+		}
+
+		.marquee {
+			top: 6em;
+			position: relative;
+			box-sizing: border-box;
+			animation: marquee 15s linear infinite;
+		}
+
+		.marquee:hover {
+			animation-play-state: paused;
+		}
+
+		/* Make it move! */
+		@keyframes marquee {
+			0%   { top:   8em }
+			100% { top: -11em }
+		}
+
+		@keyframes marquee {
+			0%   { top:   2em }
+			100% { top: -28em }
+		}
+
+		/* Make it look pretty */
+		.microsoft .marquee {
+			margin: 0;
+			padding: 0 1em;
+			padding: 0 0.1em;
+			line-height: 1.5em;
+			font: 1em 'Segoe UI', Tahoma, Helvetica, Sans-Serif;
+		}
+
+		.microsoft:before, .microsoft::before,
+		.microsoft:after,  .microsoft::after {
+			left: 0;
+			z-index: 1;
+			content: '';
+			position: absolute;
+			pointer-events: none;
+			width: 100%; height: 2em;
+			background-image: linear-gradient(top, #FFF, rgba(255,255,255,0));
+		}
+
+		.microsoft:after, .microsoft::after {
+			bottom: 0;
+			transform: rotate(180deg);
+		}
+
+		.microsoft:before, .microsoft::before {
+			top: 0;
+		}
+
+		/* Style the links */
+		.vanity {
+			color: #333;
+			text-align: center;
+			font: .75em 'Segoe UI', Tahoma, Helvetica, Sans-Serif;
+		}
+
+		.vanity a, .microsoft a {
+			color: #1570A6;
+			transition: color .5s;
+			text-decoration: none;
+		}
+
+		.vanity a:hover, .microsoft a:hover {
+			color: #F65314;
+		}
+
+		/* Style toggle button */
+		.toggle {
+			display: block;
+			margin: 2em auto;
+		}
+
+		.gold_sponser_table_01 img {
+			width: 100px;
+			height: 80px;
+			border: 4px solid orange;
+		}
+
+
+		/***youtube video  size style********/
+		.you_tubee iframe {
+			width: 200px;
+			height: 100px;
+		}
+
+		@media screen and (max-width: 600px) {
+			.you_tubee iframe {
+				width: 90%;
+				height: 140px;
+			}
+		}
+
+
+
+		/***new marquee style**/
+		/*#exhibition {
+			position: absolute;
+			top: 60vh;
+			left: 26vw;			
+			width: 120px;
+			height:180px; 
+			background: transparent;
+			z-index: 2;
+		}
+
+
+		#conference {
+			position: absolute;
+			top: 65vh;
+			right: 25%;
+			z-index: 2;
+			width: 120px;
+			height:120px; 
+			background: transparent;
+		}
+
+		#lounge {
+			position: absolute;
+			top: 50vh;
+			right: 26vw;
+			z-index: 2;
+			width: 100px;
+			height:70px; 
+			background: transparent;
+			}*/
+
+			#conference {
+				position: absolute;
+				top: 16vh;
+				right: -9vw;
+				z-index: 2;				
+				background: transparent;
+			}
+
+			#conference a {
+				text-decoration: none;
+				background: transparent;
+				color: transparent;
+				padding: 12px;
+				border-radius: 4px;	
+			}
+
+			#lounge {
+				position: absolute;
+				top: 2vh;
+				right: -9vw;
+				z-index: 2;				
+				background: transparent;
+			}
+
+
+			#lounge a {
+				text-decoration: none;
+				background: transparent;
+				color: transparent;
+				padding: 12px;
+				border-radius: 4px;	
+			}
+
+
+			#exhibition {
+				position: absolute;
+				top: 16vh;
+				left: -6vw;
+				z-index: 2;						
+			}
+
+			#exhibition a {
+				text-decoration: none;
+				background: transparent;
+				color: transparent;
+				padding: 12px;
+				border-radius: 4px;
+			}
+
+
+
+
+
+		</style>
+	</head>
+	<body>
+
+		<!--navbar section-->
+		<nav class="navbar  navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>                        
+					</button>
+					<a class="navbar-brand" href="#"><img class="img-responsive shadow" src="images/logo.png" alt="logo" style="border-radius: 50%;"></a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav navbar-right">
+						<li class=""><a href="javascript:void(0);">About us</a></li>
+						<li><a href="exhibition_hall.html">Exhibition</a></li>
+						<li><a href="auditorium.html">Conference</a></li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="">B2B Meeting 
+								<!--<span class="caret"></span></a>-->
+								<ul class="dropdown-menu">
+									<li><a href="#">Dashboard</a></li>
+									<li><a href="#">Profile</a></li>
+									<li><a href="#">Logout</a></li>
+								</ul>
+							</li>					
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<!--navbar section end-->
+
+			<!--top section of announcement, youtube and exhibitor container-->
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 " style="padding: 8px; visibility: hidden;">
+						<div class="announcement" style="display: block;"><!-- announcement start -->
+							<h1>Announcement</h1>
+							<div style="height:100px; overflow:hidden;">
+								<marquee direction="up" scrollamount="2" onMouseOver="this.stop()" onMouseOut="this.start()">
+									<p class="grow"><span class="span1">Organiser (Swaminathan) :</span>&nbsp We are offering up to 70% off on our wide range of product. </p>
+									<p class="grow"><span class="span1">Organiser (Swaminathan) :</span>&nbsp We are offering up to 70% off on our wide range of product. </p>
+								</marquee>
+							</div>
+						</div><!-- announcement end -->
+					</div>
+
+
+
+
+
+
+					<div class="col-md-4 ">	
+						<div class="moving_banner" ><!-- announcement start -->
+							<img src="images\banner.png" style="border: 0px solid red;">
+						</div><!-- announcement end -->
+
+
+						<h3 class="text-center" style="background: white; padding: 2px; border: 4px solid navy; border-radius: 4px;">Water Expo
+						</h3>
+					</div>
+
+					<div class="col-md-4 " style="padding: 8px; visibility: hidden;">
+						<div class="solar_expo" style="display: block;"><!-- Expo start -->
+							<div class="solar_expo_main">
+								<div class=" solar_expo_main_left" >
+									<img  class="img-responsive" src="images\food_universe.jpeg" >
+								</div>
+								<div class="solar_expo_main_right">
+									<p>
+										Food Universe<br>
+										xyz Pvt Ltd <br>
+										info@gmail.com <br>
+										123456789 <br>
+									</p>
+								</div>
+							</div>
+						</div><!-- Expo end -->
+					</div>
+				</div>
+			</div>
+			<!--top section end-->
+
+			<!--middle sectionn of sponsor,new arrival , bannner and product-->
+			<div class="container">
+				<div class="row">
+
+
+					<div class="col-lg-2  ">
+						<div class="gold_sponser">  
+							<div class="gold_sponser_table">
+								<h1>SPONSORS</h1>
+								<div id="gold-marquee" style="height:322px;  overflow:hidden;">
+									<div class="microsoft marquee-container">
+										<div class="marquee">
+											<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+											<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+											<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+											<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+											<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+											<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+										</div>
+									</div>
+								</div>
+
+
+							</div>
+						</div><!-- Gold Sponser end -->
+					</div>
+
+					<div class="col-lg-2  ">
+						<div class="new_arrival"><!-- New Arrival start -->
+							<h1>SPONSORS</h1>
+							<div id="new-arrival-marquee" style="height:204px; overflow:hidden;">
+								<div class="microsoft marquee-container">
+									<div class="marquee">
+										<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+										<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+										<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+										<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+										<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+										<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+									</div>
+								</div>
+							</div>
+
+
+
+						</div><!-- New Arrival end -->
+					</div>
+
+					<div class="col-lg-4  " style="padding: 0px;">
+						<div class="row">
+							<div class="col-lg-4">
+								<div id="exhibition" style="">
+									<a href="exhibition_hall.html" title="">EXHIBITION</a>
+								</div>
+							</div>
+
+							<div class="col-lg-4">
+								<div class="you_tubee"><!-- announcement start -->
+									<div style="height:207px;  ">
+										<iframe  style=" border: 5px solid black; display: block; margin: auto;" src="https://www.youtube.com/embed/je1pIAcxHyM" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+									</div>
+								</div><!-- announcement end -->
+							</div>
+
+							<div class="col-lg-4">
+								<div id="lounge" style="">
+									<a href="b2b_lounge.html" title="">B2B LOUNGE</a>
+								</div>
+
+								<div id="conference" style="">
+									<a href="auditorium.html" title="">CONFERENCE</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-2">
+						<div class="silver_sponser" style=""><!-- Diamond Sponser start -->
+							<div class="silver_sponser_table">
+								<h1>SPONSORS</h1>
+								<div id="sponsor-marquee" style="height:204px; overflow:hidden;">
+									<div class="microsoft marquee-container">
+										<div class="marquee">
+											<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+											<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+											<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+											<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+											<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+											<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+										</div>
+									</div>
+								</div>
+
+
+							</div>
+						</div><!-- Diamond Sponser end -->
+					</div>
+
+
+
+					<div class="col-lg-2">
+						<div class="products"><!-- products start -->
+							<h1>SPONSORS </h1>
+							<div id="product-marquee" style="height:230x; overflow:hidden;">
+								<div class="microsoft marquee-container">
+									<div class="marquee">
+										<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+										<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+										<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+										<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+										<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+										<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+									</div>
+								</div>
+							</div>
+
+
+						</div><!-- products end -->
+					</div>
+				</div>
+			</div>
+			<!--middle sectionn of sponsor,new arrival , bannner and product end-->
+
+			<!--buttons section of audiotorium, contact us , give v card , take v card-->
+			<div class="container" >
+				<div class="row">
+					<div class="col-sm-12">
+
+
+						<div id="button-group " >
+							<!-- Single button -->
+							<div class="row" style="">
+								<div class="span12 text-center top-menu" style=" background: ; padding: 10px 50px; border-radius: 5px;">				
+									<div class="btn-group dropup animated top-menu">
+										<a type="button" class="btn btn-default" href="auditorium.html"><i class="fa fa-fw fa-user"></i>Audiotorium</a>
+									</div><!-- /btn-group dropup -->
+
+									<div class="btn-group dropup animated top-menu">
+										<button type="button" class="btn btn-default" data-toggle="modal" data-target="#contact"><i class="fa fa-fw fa-envelope"></i>Contact us</button>
+									</div><!-- /btn-group dropup -->
+									<div class="btn-group dropup animated top-menu">
+										<button type="button" class="btn btn-default" data-toggle="modal" data-target="#give-vcard"><i class="fa fa-home"></i> Give V card</button>
+									</div><!-- /btn-group dropup -->
+									<div class="btn-group dropup animated top-menu">
+										<button type="button" class="btn btn-default" data-toggle="modal" data-target="#take-vcard"><i class="fa fa-home"></i>Take V card</button>
+									</div><!-- /btn-group dropup -->					
+
+								</div>
+
+							</div>
+						</div>
+
+						<!--button group end-->
+					</div>
+				</div>
+			</div>
+			<!--buttons section of audiotorium, contact us , give v card , take v card end-->
+
+			
+
+			<!--banner-->
+
+
+			<div style="position: fixed; bottom: 0px; right: 0px; background: red; color: white;
+			padding: 5px; border-radius: 10px 0px 0px 10px;">
+			<p>Please click on exhibition</p>
+		</div>
+
+
+
+
+		<!--left social icons-->
+		<div class="social-icons" id="s-icons">
+			<ul class="navbar-nav">
+				<li><a href="#" class="btn1 btn-primary1 btn-social1 "><i class="fa fa-facebook-official fa-2x"></i></a></li>
+				<li><a href="#" class="btn2 btn-primary2 btn-social2 "><i class="fa fa-twitter-square fa-2x"></i></a></li>
+				<li><a href="#" class="btn3 btn-primary3 btn-social3 "><i class="fa fa-linkedin fa-2x"></i></a></li>
+				<li><a href="#" class="btn4 btn-primary4 btn-social4 "><i class="fa fa-google fa-2x"></i></a></li>
+			</ul>
+			<button class="btn btn-primary btn-social left_button" id="btn-share" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
+				<i class="fa fa-share-alt fa-2x"></i>
+			</button>
+		</div>
+		<!--social icons end-->
+
+
+		<!--right side skype and whatsapp-->
+		<div id="fixedsocial">   
+			<div class="facebookflat"><img src="images\ss1.png"></div> 
+			<div class="twitterflat"><img src="images\ss2.png"></div> 
+			<div class="twitterflat"><img src="images\ss3.png"></div> 
+		</div>
+		<!--right side skype and whatsapp end-->
+
+
+		<!---bottom button group-->
+		<!--bottom button-->
+		<div id="button-group" style="visibility: visible;">
+			<!-- Single button -->
+			<div class="" >
+				<div class="span12 text-center bottom-menu" >				
+					<div class="btn-group dropup animated">
+						<button type="button" class="btn " data-toggle="modal" data-target="#briefcase">
+							<i class="fa fa-briefcase menu_round" aria-hidden="true"></i> <br> Briefcase</button>
+							<!--<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<span class="caret"></span>
+								<span class="sr-only">Toggle Dropdown</span>
+							</button>
+							<ul class="dropdown-menu">
+								<li><div><img class="img-responsive"  style="width: 150px; height: 100px;"src="images/bandhan.png" alt=""></div></li>
+								<li><img style="width: 150px; height: 100px;"src="images/bandhan.png" alt=""></li>
+
+								<li><a type="button" class="btn btn-primary" href="#">view all</a></li>
+							</ul>-->
+						</div><!-- /btn-group dropup -->
+						<div class="btn-group dropup animated">
+							<button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-address-card-o menu_round" aria-hidden="true"  ></i><br>
+							Exhibitor</button>							
+							<ul class="dropdown-menu">
+								<li><div><img class="img-responsive"  style="width: 150px; height: 100px;"src="images/bandhan.png" alt=""></div></li>
+								<li><img style="width: 150px; height: 100px;"src="images/bandhan.png" alt=""></li>
+
+								<li><a type="button" class="btn btn-primary" href="#" data-toggle="modal" data-target="#exhibitor">view all</a></li>
+							</ul>
+						</div><!-- /btn-group dropup -->
+						<div class="btn-group dropup animated">
+							<button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-users menu_round" aria-hidden="true"  ></i><br>
+							Visitors </button>
+
+							<ul class="dropdown-menu">
+								<li><div><img class="img-responsive"  style="width: 150px; height: 100px;"src="images/bandhan.png" alt=""></div></li>
+								<li><img style="width: 150px; height: 100px;"src="images/bandhan.png" alt=""></li>
+
+								<li><a type="button" class="btn btn-primary" href="#"  data-toggle="modal" data-target="#visitor">view all</a></li>
+							</ul>
+						</div><!-- /btn-group dropup -->
+
+						<div class="btn-group dropup animated">
+							<button type="button" class="btn dropdown-toggle" aria-hidden="true"   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-shopping-cart menu_round" ></i><br>
+							Product</button>
+
+							<ul class="dropdown-menu">
+								<li><div><img class="img-responsive"  style="width: 150px; height: 100px;"src="images/bandhan.png" alt=""></div></li>
+								<li><img style="width: 150px; height: 100px;"src="images/bandhan.png" alt=""></li>
+
+								<li><a type="button" class="btn btn-primary" href="#" data-toggle="modal" data-target="#product">view all</a></li>
+							</ul>
+						</div><!-- /btn-group dropup -->
+						<div class="btn-group dropup animated">
+							<button type="button" class="btn dropdown-toggle" aria-hidden="true"   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-ship menu_round" ></i><br>
+							New Arrival</button>
+
+
+							<ul class="dropdown-menu">
+								<li><div><img class="img-responsive"  style="width: 150px; height: 100px;"src="images/bandhan.png" alt=""></div></li>
+								<li><img style="width: 150px; height: 100px;"src="images/bandhan.png" alt=""></li>
+
+								<li><a type="button" class="btn btn-primary" href="#" data-toggle="modal" data-target="#new_arrival1">view all</a></li>
+							</ul>
+						</div><!-- /btn-group dropup -->
+						<div class="btn-group dropup animated">
+							<button type="button" class="btn dropdown-toggle" aria-hidden="true"    aria-haspopup="true" aria-expanded="false" data-toggle="modal" data-target="#documents"><i class="fa fa-file-text-o menu_round" aria-hidden="true"></i><br>Documents
+							</button>
+
+
+
+						</div><!-- /btn-group dropup -->
+					</div>
+
+				</div>
+			</div>
+			<!--bottom button group end-->
+
+
+
+
+			<!--modals-->
+			
+			<!--briefcase modal-->
+			<!-- The Modal -->
+			<div class="modal fade" id="briefcase" data-modal-color="cyan"  data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-hidden="true">
+				<div class="modal-dialog modal-lg" >
+					<div class="modal-content">
+
+						<!-- Modal Header -->
+						<div class="modal-header">
+							<h4 class="modal-title">BRIEFCASE</h4>
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+						</div>
+
+						<!-- Modal body -->
+						<div class="modal-body">
+							<div class="">
+								<h2></h2>
+								<br>
+								<!-- Nav pills -->
+								<ul class="nav nav-pills" role="tablist">
+									<li class="nav-item">
+										<a class="nav-link active" data-toggle="pill" href="#home">Documents</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" data-toggle="pill" href="#menu1">V-cards</a>
+									</li>
+
+								</ul>
+
+								<!-- Tab panes -->
+								<div class="tab-content">
+									<div id="home" class="tab-pane active"><br>
+										<h3>HOME</h3>
+										<table class="table table-bordered">
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Action</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>floor plan</td>
+													<td>
+														<a class="" id="register_button" type="submit" style="width: 90px;">view</a>
+														<a class="" id="register_button" type="submit" style="width: 90px;">Delete</a>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+									<div id="menu1" class="tab-pane fade"><br>
+										<div class="container-fluid">
+											<div class="business-card">
+												<div class="content">
+													<div class="top" style="display: flex; justify-content: space-around;">
+														<div>
+															<div class="name">Gaurav Jaiswal</div>
+															<div class="profession">Front end developer</div>
+														</div>
+														<img  class="img-responsive w-25 ml-3 img-thumbnail" src="images/bill.jpg" alt="" style="max-width: 25%;">
+													</div>
+
+													<div class="bottom">
+														<div class="left">
+															<div class="email">gauravjaiswal@gmail.com</div>
+															<div class="phone">+91 9810436458</div>
+															<div class="website">gauravjaiswal@gmail.com</div>
+
+															<div class="form-group">                        
+																<textarea class="form-control" rows="1" id="comment" placeholder="comment"></textarea>
+															</div>
+															<a class="btn btn-warning" href="" title="">SUBMIT</a>
+
+														</div>
+														<div class="right">
+															<div class="location">New Delhi, India</div>
+														</div>
+													</div>
+												</div>
+												<div class="background">
+													<div class="slice"></div>
+												</div>
+											</div>
+											
+										</div> 
+									</div>
+									<div id="menu2" class="tab-pane fade"><br>
+										<h3>Menu 2</h3>
+										<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+									</div>
+								</div>
+
+
+							</div>
+						</div>
+
+						<!-- Modal footer -->
+						<div class="modal-footer">
+							<button  class="btn btn-danger" type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<!--briefcase modal end--->
+
+
+			<!--document modal-->
+
+			<!-- The Modal -->
+
+			<!-- The Modal -->
+			<div class="modal fade" id="myModal1"  data-modal-color="cyan"  data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-hidden="true">
+				<div class="modal-dialog modal-xl">
+					<div class="modal-content">
+
+						<!-- Modal Header -->
+						<div class="modal-header">
+							<h4 class="modal-title">DOCUMENTS</h4>
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+						</div>
+
+						<!-- Modal body -->
+						<div class="modal-body">
+							<table class="table table-borderless table-striped">
+								<thead>
+									<tr>
+										<th>TITLE </th>
+										<th>ACTION</th>
+
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>REPORT OF 19</td>
+										<td><button class="btn btn-primary" type="">view</button></td>
+									</tr>
+
+									<tr>
+										<td>BROCHURE</td>
+										<td><button class="btn btn-primary" type="">view & Download</button></td>
+
+									</tr>
+									<tr>
+										<td>FLOOR PLAN</td>
+										<td><button class="btn btn-primary" type=""> Download</button></td>
+
+									</tr>
+
+								</tbody>
+							</table>
+						</div>
+
+						<!-- Modal footer -->
+						<div class="modal-footer">
+							<button class="btn btn-danger" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<!--document modal end--->
+
+
+			<!-- briefcase modals end-->
+
+			<!------EXHIBITOR MODAL---->
+			<div class="modal fade" id="exhibitor">
+				<div class="modal-dialog modal-lg" role="dialog">
+					<div class="modal-content">
+
+						<!-- Modal Header -->
+						<div class="modal-header">
+							<h4 class="modal-title">Exhibitor Listing</h4>
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+						</div>
+
+						<!-- Modal body -->
+						<div class="modal-body">            
+							<div class="container-fluid">
+
+								<div class="row">
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+								</div>
+
+
+								<!--second row--->
+								<div class="row">
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--first container-->
+
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+								</div>
+
+
+								<!--second row--->
+								<div class="row">
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							<!--second container-->
+
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+								</div>
+
+
+								<!--second row--->
+								<div class="row">
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Modal footer -->
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<!----EXHIBITOR MODAL END---->
+
+
+			<!--VISITOR MODAL --->
+			<div class="modal fade" id="visitor">
+				<div class="modal-dialog modal-lg" role="dialog">
+					<div class="modal-content">
+
+						<!-- Modal Header -->
+						<div class="modal-header">
+							<h4 class="modal-title">Visitors Listing</h4>
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+						</div>
+
+						<!-- Modal body -->
+						<div class="modal-body">            
+							<div class="container-fluid">
+
+								<div class="row">
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+								</div>
+
+
+								<!--second row--->
+								<div class="row">
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--first container-->
+
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+								</div>
+
+
+								<!--second row--->
+								<div class="row">
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							<!--second container-->
+
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+								</div>
+
+
+								<!--second row--->
+								<div class="row">
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+
+									<div class="col-sm-3">
+										<div class="panel">
+											<div class="panel-image">
+												<figure class="image is-3by2">
+													<img src="images/bill.jpg" alt="">
+												</figure>
+												<div class="panel-content is-overlay is-clipped ">
+													<h4 class="" >bill gates </h4>
+													<p>Sales Manager at js exhibition</p>
+													<span class="tag is-info">
+														Gujrat, India
+													</span>       
+												</div>
+											</div>
+											<footer class="panel-footer" id="card-footer">
+												<a class="panel-footer-item">
+
+												</a>
+											</footer>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Modal footer -->
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<!--VISITOR MODAL END-->
+
+
+			<!---PRODUCT   MODEL--->
+			<div class="modal fade" id="product">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+
+						<!-- Modal Header -->
+						<div class="modal-header">
+							<h4 class="modal-title">Product Listing</h4>
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+						</div>
+
+						<!-- Modal body -->
+						<div class="modal-body">  
+							<div class="container-fluid">
+								<div class="row">
+
+									<div class="col-sm-12">
+										<!---form-->
+										<form class="form-inline" action="/action_page.php">
+
+											<input type="text" class="form-control" placeholder="Enter products" id="email">
+											<span class="button-group">
+												<button type="button" class="btn btn-light form-control btn-sm dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span> <span class="caret"></span> None selected</button>
+												<ul class="dropdown-menu product-menu">
+													<li><a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 1</a></li>
+													<li><a href="#" class="small" data-value="option2" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 2</a></li>
+													<li><a href="#" class="small" data-value="option3" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 3</a></li>
+													<li><a href="#" class="small" data-value="option4" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 4</a></li>
+													<li><a href="#" class="small" data-value="option5" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 5</a></li>
+													<li><a href="#" class="small" data-value="option6" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 6</a></li>
+												</ul>
+											</span>
+											<input type="text" class="form-control" placeholder="min" id="pwd">
+											<input type="text" class="form-control" placeholder="max" id="pwd">
+											<button class='btn btn-primary m-0' type="submit"><i class="fa fa-search"></i></input>
+
+											</form>
+										</div>
+									</div>
+								</div> 
+
+
+								<div class="container-fluid mt-3" style="margin-top: 20px;">
+									<div class="row">
+										<div class="col-sm-3">
+											<div class="panel">
+												<div class="panel-image">
+													<figure class="image is-3by2">
+														<img src="images/gg.png" alt="">
+													</figure>
+													<div class="panel-content is-overlay is-clipped ">
+														<h4 class="">1932   </h4>
+														<span>INR 95000</span>
+
+														<span class="tag is-info">
+															N/A<i class="fa fa-star" aria-hidden="true"></i>
+														</span>       
+													</div>
+												</div>
+												<footer class="panel-footer">
+													<a class="panel-footer-item">
+
+													</a>
+												</footer>
+											</div>
+										</div>
+
+										<div class="col-sm-3">
+											<div class="panel">
+												<div class="panel-image">
+													<figure class="image is-3by2">
+														<img src="images/gg.png" alt="">
+													</figure>
+													<div class="panel-content is-overlay is-clipped">
+														<h4>1932... </h4>
+														<span>INR 95000</span>
+														<span class="tag is-info">
+															N/A<i class="fa fa-star" aria-hidden="true"></i>
+														</span>         
+													</div>
+												</div>
+												<footer class="panel-footer">
+													<a class="panel-footer-item">
+
+													</a>
+												</footer>
+											</div>
+										</div>
+
+										<div class="col-sm-3">
+											<div class="panel">
+												<div class="panel-image">
+													<figure class="image is-3by2">
+														<img src="images/gg.png" alt="">
+													</figure>
+													<div class="panel-content is-overlay is-clipped">
+														<h4>1932... </h4>
+														<span>INR 95000</span>
+														<span class="tag is-info">
+															N/A<i class="fa fa-star" aria-hidden="true"></i>
+														</span>       
+													</div>
+												</div>
+												<footer class="panel-footer">
+													<a class="panel-footer-item">
+
+													</a>
+												</footer>
+											</div>
+										</div>
+
+										<div class="col-sm-3">
+											<div class="panel">
+												<div class="panel-image">
+													<figure class="image is-3by2">
+														<img src="images/gg.png" alt="">
+													</figure>
+													<div class="panel-content is-overlay is-clipped">
+														<h4>1932... </h4>
+														<span>INR 95000</span>
+														<span class="tag is-info">
+															N/A<i class="fa fa-star" aria-hidden="true"></i>
+														</span>        
+													</div>
+												</div>
+												<footer class="panel-footer">
+													<a class="panel-footer-item">
+
+													</a>
+												</footer>
+											</div>                  
+										</div>
+									</div>
+
+
+									<!--second row--->
+									<div class="row mt-3">
+										<div class="col-sm-3">
+											<div class="panel">
+												<div class="panel-image">
+													<figure class="image is-3by2">
+														<img src="images/gg.png" alt="">
+													</figure>
+													<div class="panel-content is-overlay is-clipped">
+														<h4>1932... </h4>
+														<span>INR 95000</span>
+														<span class="tag is-info">
+															N/A<i class="fa fa-star" aria-hidden="true"></i>
+														</span>        
+													</div>
+												</div>
+												<footer class="panel-footer">
+													<a class="panel-footer-item">
+
+													</a>
+												</footer>
+											</div>
+										</div>
+
+										<div class="col-sm-3">
+											<div class="panel">
+												<div class="panel-image">
+													<figure class="image is-3by2">
+														<img src="images/gg.png" alt="">
+													</figure>
+													<div class="panel-content is-overlay is-clipped">
+														<h4>1932... </h4>
+														<span>INR 95000</span>
+														<span class="tag is-info">
+															N/A<i class="fa fa-star" aria-hidden="true"></i>
+														</span>       
+													</div>
+												</div>
+												<footer class="panel-footer">
+													<a class="panel-footer-item">
+
+													</a>
+												</footer>
+											</div>
+										</div>
+
+										<div class="col-sm-3">
+											<div class="panel">
+												<div class="panel-image">
+													<figure class="image is-3by2">
+														<img src="images/gg.png" alt="">
+													</figure>
+													<div class="panel-content is-overlay is-clipped">
+														<h4>1932... </h4>
+														<span>INR 95000</span>
+														<span class="tag is-info">
+															N/A<i class="fa fa-star" aria-hidden="true"></i>
+														</span>       
+													</div>
+												</div>
+												<footer class="panel-footer">
+													<a class="panel-footer-item">
+
+													</a>
+												</footer>
+											</div>
+										</div>
+
+										<div class="col-sm-3">
+											<div class="panel">
+												<div class="panel-image">
+													<figure class="image is-3by2">
+														<img src="images/gg.png" alt="">
+													</figure>
+													<div class="panel-content is-overlay is-clipped">
+														<h4>1932... </h4>
+														<span>INR 95000</span>
+														<span class="tag is-info">
+															N/A<i class="fa fa-star" aria-hidden="true"></i>
+														</span>        
+													</div>
+												</div>
+												<footer class="panel-footer">
+													<a class="panel-footer-item">
+
+													</a>
+												</footer>
+											</div>                  
+										</div>
+									</div>
+								</div>
+								<!--first container-->
+
+								<div class="container-fluid">
+									<div class="row mt-3">
+										<div class="col-sm-3">
+											<div class="panel">
+												<div class="panel-image">
+													<figure class="image is-3by2">
+														<img src="images/gg.png" alt="">
+													</figure>
+													<div class="panel-content is-overlay is-clipped">
+														<h4>1932... </h4>
+														<span>INR 95000</span>
+														<span class="tag is-info">
+															N/A<i class="fa fa-star" aria-hidden="true"></i>
+														</span>        
+													</div>
+												</div>
+												<footer class="panel-footer">
+													<a class="panel-footer-item">
+
+													</a>
+												</footer>
+											</div>
+										</div>
+
+										<div class="col-sm-3">
+											<div class="panel">
+												<div class="panel-image">
+													<figure class="image is-3by2">
+														<img src="images/gg.png" alt="">
+													</figure>
+													<div class="panel-content is-overlay is-clipped">
+														<h4>1932... </h4>
+														<span>INR 95000</span>
+														<span class="tag is-info">
+															N/A<i class="fa fa-star" aria-hidden="true"></i>
+														</span>       
+													</div>
+												</div>
+												<footer class="panel-footer">
+													<a class="panel-footer-item">
+
+													</a>
+												</footer>
+											</div>
+										</div>
+
+										<div class="col-sm-3">
+											<div class="panel">
+												<div class="panel-image">
+													<figure class="image is-3by2">
+														<img src="images/gg.png" alt="">
+													</figure>
+													<div class="panel-content is-overlay is-clipped">
+														<h4>1932... </h4>
+														<span>INR 95000</span>
+														<span class="tag is-info">
+															N/A<i class="fa fa-star" aria-hidden="true"></i>
+														</span>       
+													</div>
+												</div>
+												<footer class="panel-footer">
+													<a class="panel-footer-item">
+
+													</a>
+												</footer>
+											</div>
+										</div>
+
+										<div class="col-sm-3">
+											<div class="panel">
+												<div class="panel-image">
+													<figure class="image is-3by2">
+														<img src="images/gg.png" alt="">
+													</figure>
+													<div class="panel-content is-overlay is-clipped">
+														<h4>1932... </h4>
+														<span>INR 95000</span>
+														<span class="tag is-info">
+															N/A<i class="fa fa-star" aria-hidden="true"></i>
+														</span>        
+													</div>
+												</div>
+												<footer class="panel-footer">
+													<a class="panel-footer-item">
+
+													</a>
+												</footer>
+											</div>                  
+										</div>
+									</div>
+
+
+									<!--second row--->
+									<div class="row mt-3">
+										<div class="col-sm-3">
+											<div class="panel">
+												<div class="panel-image">
+													<figure class="image is-3by2">
+														<img src="images/gg.png" alt="">
+													</figure>
+													<div class="panel-content is-overlay is-clipped">
+														<h4>1932... </h4>
+														<span>INR 95000</span>
+														<span class="tag is-info">
+															N/A<i class="fa fa-star" aria-hidden="true"></i>
+														</span>        
+													</div>
+												</div>
+												<footer class="panel-footer">
+													<a class="panel-footer-item">
+
+													</a>
+												</footer>
+											</div>
+										</div>
+
+										<div class="col-sm-3">
+											<div class="panel">
+												<div class="panel-image">
+													<figure class="image is-3by2">
+														<img src="images/gg.png" alt="">
+													</figure>
+													<div class="panel-content is-overlay is-clipped">
+														<h4>1932... </h4>
+														<span>INR 95000</span>
+														<span class="tag is-info">
+															N/A<i class="fa fa-star" aria-hidden="true"></i>
+														</span>       
+													</div>
+												</div>
+												<footer class="panel-footer">
+													<a class="panel-footer-item">
+
+													</a>
+												</footer>
+											</div>
+										</div>
+
+										<div class="col-sm-3">
+											<div class="panel">
+												<div class="panel-image">
+													<figure class="image is-3by2">
+														<img src="images/gg.png" alt="">
+													</figure>
+													<div class="panel-content is-overlay is-clipped">
+														<h4>1932... </h4>
+														<span>INR 95000</span>
+														<span class="tag is-info">
+															N/A<i class="fa fa-star" aria-hidden="true"></i>
+														</span>       
+													</div>
+												</div>
+												<footer class="panel-footer">
+													<a class="panel-footer-item">
+
+													</a>
+												</footer>
+											</div>
+										</div>
+
+										<div class="col-sm-3">
+											<div class="panel">
+												<div class="panel-image">
+													<figure class="image is-3by2">
+														<img src="images/gg.png" alt="">
+													</figure>
+													<div class="panel-content is-overlay is-clipped">
+														<h4>1932... </h4>
+														<span>INR 95000</span>
+														<span class="tag is-info">
+															N/A<i class="fa fa-star" aria-hidden="true"></i>
+														</span>        
+													</div>
+												</div>
+												<footer class="panel-footer">
+													<a class="panel-footer-item">
+
+													</a>
+												</footer>
+											</div>                  
+										</div>
+									</div>
+
+								</div>
+								<!--second container-->
+
+								<div class="container-fluid">
+									<div class="row mt-3">
+										<div class="col-sm-3">
+											<div class="panel">
+												<div class="panel-image">
+													<figure class="image is-3by2">
+														<img src="images/gg.png" alt="">
+													</figure>
+													<div class="panel-content is-overlay is-clipped">
+														<h4>1932... </h4>
+														<span>INR 95000</span>
+														<span class="tag is-info">
+															N/A<i class="fa fa-star" aria-hidden="true"></i>
+														</span>        
+													</div>
+												</div>
+												<footer class="panel-footer">
+													<a class="panel-footer-item">
+
+													</a>
+												</footer>
+											</div>
+										</div>
+
+										<div class="col-sm-3">
+											<div class="panel">
+												<div class="panel-image">
+													<figure class="image is-3by2">
+														<img src="images/gg.png" alt="">
+													</figure>
+													<div class="panel-content is-overlay is-clipped">
+														<h4>1932... </h4>
+														<span>INR 95000</span>
+														<span class="tag is-info">
+															N/A<i class="fa fa-star" aria-hidden="true"></i>
+														</span>       
+													</div>
+												</div>
+												<footer class="panel-footer">
+													<a class="panel-footer-item">
+
+													</a>
+												</footer>
+											</div>
+										</div>
+
+										<div class="col-sm-3">
+											<div class="panel">
+												<div class="panel-image">
+													<figure class="image is-3by2">
+														<img src="images/gg.png" alt="">
+													</figure>
+													<div class="panel-content is-overlay is-clipped">
+														<h4>1932... </h4>
+														<span>INR 95000</span>
+														<span class="tag is-info">
+															N/A<i class="fa fa-star" aria-hidden="true"></i>
+														</span>       
+													</div>
+												</div>
+												<footer class="panel-footer">
+													<a class="panel-footer-item">
+
+													</a>
+												</footer>
+											</div>
+										</div>
+
+										<div class="col-sm-3">
+											<div class="panel">
+												<div class="panel-image">
+													<figure class="image is-3by2">
+														<img src="images/gg.png" alt="">
+													</figure>
+													<div class="panel-content is-overlay is-clipped">
+														<h4>1932... </h4>
+														<span>INR 95000</span>
+														<span class="tag is-info">
+															N/A<i class="fa fa-star" aria-hidden="true"></i>
+														</span>        
+													</div>
+												</div>
+												<footer class="panel-footer">
+													<a class="panel-footer-item">
+
+													</a>
+												</footer>
+											</div>                  
+										</div>
+									</div>
+
+
+									<!--second row--->
+									<div class="row mt-3">
+										<div class="col-sm-3">
+											<div class="panel">
+												<div class="panel-image">
+													<figure class="image is-3by2">
+														<img src="images/gg.png" alt="">
+													</figure>
+													<div class="panel-content is-overlay is-clipped">
+														<h4>1932... </h4>
+														<span>INR 95000</span>
+														<span class="tag is-info">
+															N/A<i class="fa fa-star" aria-hidden="true"></i>
+														</span>        
+													</div>
+												</div>
+												<footer class="panel-footer">
+													<a class="panel-footer-item">
+
+													</a>
+												</footer>
+											</div>
+										</div>
+
+										<div class="col-sm-3">
+											<div class="panel">
+												<div class="panel-image">
+													<figure class="image is-3by2">
+														<img src="images/gg.png" alt="">
+													</figure>
+													<div class="panel-content is-overlay is-clipped">
+														<h4>1932... </h4>
+														<span>INR 95000</span>
+														<span class="tag is-info">
+															N/A<i class="fa fa-star" aria-hidden="true"></i>
+														</span>       
+													</div>
+												</div>
+												<footer class="panel-footer">
+													<a class="panel-footer-item">
+
+													</a>
+												</footer>
+											</div>
+										</div>
+
+										<div class="col-sm-3">
+											<div class="panel">
+												<div class="panel-image">
+													<figure class="image is-3by2">
+														<img src="images/gg.png" alt="">
+													</figure>
+													<div class="panel-content is-overlay is-clipped">
+														<h4>1932... </h4>
+														<span>INR 95000</span>
+														<span class="tag is-info">
+															N/A<i class="fa fa-star" aria-hidden="true"></i>
+														</span>       
+													</div>
+												</div>
+												<footer class="panel-footer">
+													<a class="panel-footer-item">
+
+													</a>
+												</footer>
+											</div>
+										</div>
+
+										<div class="col-sm-3">
+											<div class="panel">
+												<div class="panel-image">
+													<figure class="image is-3by2">
+														<img src="images/gg.png" alt="">
+													</figure>
+													<div class="panel-content is-overlay is-clipped">
+														<h4>1932... </h4>
+														<span>INR 95000</span>
+														<span class="tag is-info">
+															N/A<i class="fa fa-star" aria-hidden="true"></i>
+														</span>        
+													</div>
+												</div>
+												<footer class="panel-footer">
+													<a class="panel-footer-item">
+
+													</a>
+												</footer>
+											</div>                  
+										</div>
+									</div>
+								</div>
+								<!-- Modal footer -->
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<!---PRODUCT MODAL END-->
+
+
+				<!---NEW ARRIVAL  MODEL--->
+				<div class="modal fade" id="new_arrival1">
+					<div class="modal-dialog modal-lg">
+						<div class="modal-content">
+
+							<!-- Modal Header -->
+							<div class="modal-header">
+								<h4 class="modal-title">New Arrival</h4>
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+							</div>
+
+							<!-- Modal body -->
+							<div class="modal-body">  
+								<div class="container-fluid">
+									<div class="row">
+
+										<div class="col-sm-12">
+											<!---form-->
+											<form class="form-inline" action="/action_page.php">
+
+												<input type="text" class="form-control" placeholder="Enter products" id="email">
+												<span class="button-group">
+													<button type="button" class="btn btn-light form-control btn-sm dropdown-toggle" data-toggle="dropdown">
+														<span class="glyphicon glyphicon-cog">
+
+														</span> 
+														<span class="caret"></span> None selected
+													</button>
+													<ul class="dropdown-menu product-menu">
+														<li><a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 1</a></li>
+														<li><a href="#" class="small" data-value="option2" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 2</a></li>
+														<li><a href="#" class="small" data-value="option3" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 3</a></li>
+														<li><a href="#" class="small" data-value="option4" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 4</a></li>
+														<li><a href="#" class="small" data-value="option5" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 5</a></li>
+														<li><a href="#" class="small" data-value="option6" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 6</a></li>
+													</ul>
+												</span>
+												<input type="text" class="form-control" placeholder="min" id="pwd">
+												<input type="text" class="form-control" placeholder="max" id="pwd">
+												<button class='btn btn-primary m-0' type="submit">
+													<i class="fa fa-search"></i></button>
+
+												</form>
+											</div>
+										</div>
+									</div> 
+
+
+									<div class="container-fluid mt-3" style="margin-top: 20px;">
+										<div class="row">
+											<div class="col-sm-3">
+												<div class="panel">
+													<div class="panel-image">
+														<figure class="image is-3by2">
+															<img src="images/gg.png" alt="">
+														</figure>
+														<div class="panel-content is-overlay is-clipped ">
+															<h4 class="">1932   </h4>
+															<span>INR 95000</span>
+
+															<span class="tag is-info">
+																N/A<i class="fa fa-star" aria-hidden="true"></i>
+															</span>       
+														</div>
+													</div>
+													<footer class="panel-footer">
+														<a class="panel-footer-item">
+
+														</a>
+													</footer>
+												</div>
+											</div>
+
+											<div class="col-sm-3">
+												<div class="panel">
+													<div class="panel-image">
+														<figure class="image is-3by2">
+															<img src="images/gg.png" alt="">
+														</figure>
+														<div class="panel-content is-overlay is-clipped">
+															<h4>1932... </h4>
+															<span>INR 95000</span>
+															<span class="tag is-info">
+																N/A<i class="fa fa-star" aria-hidden="true"></i>
+															</span>         
+														</div>
+													</div>
+													<footer class="panel-footer">
+														<a class="panel-footer-item">
+
+														</a>
+													</footer>
+												</div>
+											</div>
+
+											<div class="col-sm-3">
+												<div class="panel">
+													<div class="panel-image">
+														<figure class="image is-3by2">
+															<img src="images/gg.png" alt="">
+														</figure>
+														<div class="panel-content is-overlay is-clipped">
+															<h4>1932... </h4>
+															<span>INR 95000</span>
+															<span class="tag is-info">
+																N/A<i class="fa fa-star" aria-hidden="true"></i>
+															</span>       
+														</div>
+													</div>
+													<footer class="panel-footer">
+														<a class="panel-footer-item">
+
+														</a>
+													</footer>
+												</div>
+											</div>
+
+											<div class="col-sm-3">
+												<div class="panel">
+													<div class="panel-image">
+														<figure class="image is-3by2">
+															<img src="images/gg.png" alt="">
+														</figure>
+														<div class="panel-content is-overlay is-clipped">
+															<h4>1932... </h4>
+															<span>INR 95000</span>
+															<span class="tag is-info">
+																N/A<i class="fa fa-star" aria-hidden="true"></i>
+															</span>        
+														</div>
+													</div>
+													<footer class="panel-footer">
+														<a class="panel-footer-item">
+
+														</a>
+													</footer>
+												</div>                  
+											</div>
+										</div>
+
+
+										<!--second row--->
+										<div class="row mt-3">
+											<div class="col-sm-3">
+												<div class="panel">
+													<div class="panel-image">
+														<figure class="image is-3by2">
+															<img src="images/gg.png" alt="">
+														</figure>
+														<div class="panel-content is-overlay is-clipped">
+															<h4>1932... </h4>
+															<span>INR 95000</span>
+															<span class="tag is-info">
+																N/A<i class="fa fa-star" aria-hidden="true"></i>
+															</span>        
+														</div>
+													</div>
+													<footer class="panel-footer">
+														<a class="panel-footer-item">
+
+														</a>
+													</footer>
+												</div>
+											</div>
+
+											<div class="col-sm-3">
+												<div class="panel">
+													<div class="panel-image">
+														<figure class="image is-3by2">
+															<img src="images/gg.png" alt="">
+														</figure>
+														<div class="panel-content is-overlay is-clipped">
+															<h4>1932... </h4>
+															<span>INR 95000</span>
+															<span class="tag is-info">
+																N/A<i class="fa fa-star" aria-hidden="true"></i>
+															</span>       
+														</div>
+													</div>
+													<footer class="panel-footer">
+														<a class="panel-footer-item">
+
+														</a>
+													</footer>
+												</div>
+											</div>
+
+											<div class="col-sm-3">
+												<div class="panel">
+													<div class="panel-image">
+														<figure class="image is-3by2">
+															<img src="images/gg.png" alt="">
+														</figure>
+														<div class="panel-content is-overlay is-clipped">
+															<h4>1932... </h4>
+															<span>INR 95000</span>
+															<span class="tag is-info">
+																N/A<i class="fa fa-star" aria-hidden="true"></i>
+															</span>       
+														</div>
+													</div>
+													<footer class="panel-footer">
+														<a class="panel-footer-item">
+
+														</a>
+													</footer>
+												</div>
+											</div>
+
+											<div class="col-sm-3">
+												<div class="panel">
+													<div class="panel-image">
+														<figure class="image is-3by2">
+															<img src="images/gg.png" alt="">
+														</figure>
+														<div class="panel-content is-overlay is-clipped">
+															<h4>1932... </h4>
+															<span>INR 95000</span>
+															<span class="tag is-info">
+																N/A<i class="fa fa-star" aria-hidden="true"></i>
+															</span>        
+														</div>
+													</div>
+													<footer class="panel-footer">
+														<a class="panel-footer-item">
+
+														</a>
+													</footer>
+												</div>                  
+											</div>
+										</div>
+									</div>
+									<!--first container-->
+
+									<div class="container-fluid">
+										<div class="row mt-3">
+											<div class="col-sm-3">
+												<div class="panel">
+													<div class="panel-image">
+														<figure class="image is-3by2">
+															<img src="images/gg.png" alt="">
+														</figure>
+														<div class="panel-content is-overlay is-clipped">
+															<h4>1932... </h4>
+															<span>INR 95000</span>
+															<span class="tag is-info">
+																N/A<i class="fa fa-star" aria-hidden="true"></i>
+															</span>        
+														</div>
+													</div>
+													<footer class="panel-footer">
+														<a class="panel-footer-item">
+
+														</a>
+													</footer>
+												</div>
+											</div>
+
+											<div class="col-sm-3">
+												<div class="panel">
+													<div class="panel-image">
+														<figure class="image is-3by2">
+															<img src="images/gg.png" alt="">
+														</figure>
+														<div class="panel-content is-overlay is-clipped">
+															<h4>1932... </h4>
+															<span>INR 95000</span>
+															<span class="tag is-info">
+																N/A<i class="fa fa-star" aria-hidden="true"></i>
+															</span>       
+														</div>
+													</div>
+													<footer class="panel-footer">
+														<a class="panel-footer-item">
+
+														</a>
+													</footer>
+												</div>
+											</div>
+
+											<div class="col-sm-3">
+												<div class="panel">
+													<div class="panel-image">
+														<figure class="image is-3by2">
+															<img src="images/gg.png" alt="">
+														</figure>
+														<div class="panel-content is-overlay is-clipped">
+															<h4>1932... </h4>
+															<span>INR 95000</span>
+															<span class="tag is-info">
+																N/A<i class="fa fa-star" aria-hidden="true"></i>
+															</span>       
+														</div>
+													</div>
+													<footer class="panel-footer">
+														<a class="panel-footer-item">
+
+														</a>
+													</footer>
+												</div>
+											</div>
+
+											<div class="col-sm-3">
+												<div class="panel">
+													<div class="panel-image">
+														<figure class="image is-3by2">
+															<img src="images/gg.png" alt="">
+														</figure>
+														<div class="panel-content is-overlay is-clipped">
+															<h4>1932... </h4>
+															<span>INR 95000</span>
+															<span class="tag is-info">
+																N/A<i class="fa fa-star" aria-hidden="true"></i>
+															</span>        
+														</div>
+													</div>
+													<footer class="panel-footer">
+														<a class="panel-footer-item">
+
+														</a>
+													</footer>
+												</div>                  
+											</div>
+										</div>
+
+
+										<!--second row--->
+										<div class="row mt-3">
+											<div class="col-sm-3">
+												<div class="panel">
+													<div class="panel-image">
+														<figure class="image is-3by2">
+															<img src="images/gg.png" alt="">
+														</figure>
+														<div class="panel-content is-overlay is-clipped">
+															<h4>1932... </h4>
+															<span>INR 95000</span>
+															<span class="tag is-info">
+																N/A<i class="fa fa-star" aria-hidden="true"></i>
+															</span>        
+														</div>
+													</div>
+													<footer class="panel-footer">
+														<a class="panel-footer-item">
+
+														</a>
+													</footer>
+												</div>
+											</div>
+
+											<div class="col-sm-3">
+												<div class="panel">
+													<div class="panel-image">
+														<figure class="image is-3by2">
+															<img src="images/gg.png" alt="">
+														</figure>
+														<div class="panel-content is-overlay is-clipped">
+															<h4>1932... </h4>
+															<span>INR 95000</span>
+															<span class="tag is-info">
+																N/A<i class="fa fa-star" aria-hidden="true"></i>
+															</span>       
+														</div>
+													</div>
+													<footer class="panel-footer">
+														<a class="panel-footer-item">
+
+														</a>
+													</footer>
+												</div>
+											</div>
+
+											<div class="col-sm-3">
+												<div class="panel">
+													<div class="panel-image">
+														<figure class="image is-3by2">
+															<img src="images/gg.png" alt="">
+														</figure>
+														<div class="panel-content is-overlay is-clipped">
+															<h4>1932... </h4>
+															<span>INR 95000</span>
+															<span class="tag is-info">
+																N/A<i class="fa fa-star" aria-hidden="true"></i>
+															</span>       
+														</div>
+													</div>
+													<footer class="panel-footer">
+														<a class="panel-footer-item">
+
+														</a>
+													</footer>
+												</div>
+											</div>
+
+											<div class="col-sm-3">
+												<div class="panel">
+													<div class="panel-image">
+														<figure class="image is-3by2">
+															<img src="images/gg.png" alt="">
+														</figure>
+														<div class="panel-content is-overlay is-clipped">
+															<h4>1932... </h4>
+															<span>INR 95000</span>
+															<span class="tag is-info">
+																N/A<i class="fa fa-star" aria-hidden="true"></i>
+															</span>        
+														</div>
+													</div>
+													<footer class="panel-footer">
+														<a class="panel-footer-item">
+
+														</a>
+													</footer>
+												</div>                  
+											</div>
+										</div>
+
+									</div>
+									<!--second container-->
+
+									<div class="container-fluid">
+										<div class="row mt-3">
+											<div class="col-sm-3">
+												<div class="panel">
+													<div class="panel-image">
+														<figure class="image is-3by2">
+															<img src="images/gg.png" alt="">
+														</figure>
+														<div class="panel-content is-overlay is-clipped">
+															<h4>1932... </h4>
+															<span>INR 95000</span>
+															<span class="tag is-info">
+																N/A<i class="fa fa-star" aria-hidden="true"></i>
+															</span>        
+														</div>
+													</div>
+													<footer class="panel-footer">
+														<a class="panel-footer-item">
+
+														</a>
+													</footer>
+												</div>
+											</div>
+
+											<div class="col-sm-3">
+												<div class="panel">
+													<div class="panel-image">
+														<figure class="image is-3by2">
+															<img src="images/gg.png" alt="">
+														</figure>
+														<div class="panel-content is-overlay is-clipped">
+															<h4>1932... </h4>
+															<span>INR 95000</span>
+															<span class="tag is-info">
+																N/A<i class="fa fa-star" aria-hidden="true"></i>
+															</span>       
+														</div>
+													</div>
+													<footer class="panel-footer">
+														<a class="panel-footer-item">
+
+														</a>
+													</footer>
+												</div>
+											</div>
+
+											<div class="col-sm-3">
+												<div class="panel">
+													<div class="panel-image">
+														<figure class="image is-3by2">
+															<img src="images/gg.png" alt="">
+														</figure>
+														<div class="panel-content is-overlay is-clipped">
+															<h4>1932... </h4>
+															<span>INR 95000</span>
+															<span class="tag is-info">
+																N/A<i class="fa fa-star" aria-hidden="true"></i>
+															</span>       
+														</div>
+													</div>
+													<footer class="panel-footer">
+														<a class="panel-footer-item">
+
+														</a>
+													</footer>
+												</div>
+											</div>
+
+											<div class="col-sm-3">
+												<div class="panel">
+													<div class="panel-image">
+														<figure class="image is-3by2">
+															<img src="images/gg.png" alt="">
+														</figure>
+														<div class="panel-content is-overlay is-clipped">
+															<h4>1932... </h4>
+															<span>INR 95000</span>
+															<span class="tag is-info">
+																N/A<i class="fa fa-star" aria-hidden="true"></i>
+															</span>        
+														</div>
+													</div>
+													<footer class="panel-footer">
+														<a class="panel-footer-item">
+
+														</a>
+													</footer>
+												</div>                  
+											</div>
+										</div>
+
+
+										<!--second row--->
+										<div class="row mt-3">
+											<div class="col-sm-3">
+												<div class="panel">
+													<div class="panel-image">
+														<figure class="image is-3by2">
+															<img src="images/gg.png" alt="">
+														</figure>
+														<div class="panel-content is-overlay is-clipped">
+															<h4>1932... </h4>
+															<span>INR 95000</span>
+															<span class="tag is-info">
+																N/A<i class="fa fa-star" aria-hidden="true"></i>
+															</span>        
+														</div>
+													</div>
+													<footer class="panel-footer">
+														<a class="panel-footer-item">
+
+														</a>
+													</footer>
+												</div>
+											</div>
+
+											<div class="col-sm-3">
+												<div class="panel">
+													<div class="panel-image">
+														<figure class="image is-3by2">
+															<img src="images/gg.png" alt="">
+														</figure>
+														<div class="panel-content is-overlay is-clipped">
+															<h4>1932... </h4>
+															<span>INR 95000</span>
+															<span class="tag is-info">
+																N/A<i class="fa fa-star" aria-hidden="true"></i>
+															</span>       
+														</div>
+													</div>
+													<footer class="panel-footer">
+														<a class="panel-footer-item">
+
+														</a>
+													</footer>
+												</div>
+											</div>
+
+											<div class="col-sm-3">
+												<div class="panel">
+													<div class="panel-image">
+														<figure class="image is-3by2">
+															<img src="images/gg.png" alt="">
+														</figure>
+														<div class="panel-content is-overlay is-clipped">
+															<h4>1932... </h4>
+															<span>INR 95000</span>
+															<span class="tag is-info">
+																N/A<i class="fa fa-star" aria-hidden="true"></i>
+															</span>       
+														</div>
+													</div>
+													<footer class="panel-footer">
+														<a class="panel-footer-item">
+
+														</a>
+													</footer>
+												</div>
+											</div>
+
+											<div class="col-sm-3">
+												<div class="panel">
+													<div class="panel-image">
+														<figure class="image is-3by2">
+															<img src="images/gg.png" alt="">
+														</figure>
+														<div class="panel-content is-overlay is-clipped">
+															<h4>1932... </h4>
+															<span>INR 95000</span>
+															<span class="tag is-info">
+																N/A<i class="fa fa-star" aria-hidden="true"></i>
+															</span>        
+														</div>
+													</div>
+													<footer class="panel-footer">
+														<a class="panel-footer-item">
+
+														</a>
+													</footer>
+												</div>                  
+											</div>
+										</div>
+									</div>
+									<!-- Modal footer -->
+									<div class="modal-footer">
+										<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!---NEW ARRIVAL MODAL END-->
+
+
+					<!--documents modal-->
+
+					<!-- The Modal -->
+					<div class="modal fade" id="documents">
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content">
+
+								<!-- Modal Header -->
+								<div class="modal-header">
+									<h4 class="modal-title">DOCUMENTS</h4>
+									<button type="button" class="close" data-dismiss="modal">&times;</button>
+								</div>
+
+								<!-- Modal body -->
+								<div class="modal-body">  
+									<div class="">
+										<div class="row">
+											<div class="col-sm-12">
+												<!--table-->
+												<div class="table-responsive" style="">
+													<table class="table   text-center table-bordered">            
+														<thead class="thead-dark" style="background: darkgrey;">
+															<tr>
+																<th>TITLE</th>
+																<th>ACTION</th>                        
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+
+																<td>FLOOR PLAN</td>
+																<td><div class="text-center"><a class="" id="register_button" type="submit" style="width: 100px;">view</a></div></td>
+
+															</tr>
+															<tr>
+
+																<td>FLOOR PLAN NN</td>
+																<td><div class="text-center"><a class="" id="register_button" type="submit" style="min-width: 100px;">view&Download</a></div></td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+									</div>
+
+
+									<!---table end-->
+								</div> 
+							</div>
+						</div>
+
+						<!-- Modal footer -->
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+
+
+					<!-----contact us modal---------->
+
+					<!-- The Modal -->
+					<div class="modal fade" id="contact">
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content">
+
+								<!-- Modal Header -->
+								<div class="modal-header">
+									<h4 class="modal-title">Contact Us</h4>
+									<button type="button" class="close" data-dismiss="modal" style="font-size: 20px;">&times;</button>
+								</div>
+
+								<!-- Modal body -->
+								<div class="modal-body">  
+									<div class="container-fluid">
+										<div class="row">
+											<div class="col-sm-12"  >
+												<div class="card-form" style="float: none; margin: 0px auto;">
+													<form class="signup">
+														<div class="form-title">Sign Up for our Newsletter!</div>
+														<div class="form-body">
+															<div class="row">
+																<div class="col-sm-6"><input type="text" placeholder="First Name*"></div> 
+																<div class="col-sm-6"><input type="text" placeholder="Last Name*"></div>
+															</div>
+															<div class="row">
+																<div class="col-sm-12">
+																	<input type="text" placeholder="Email Address*">
+																</div>
+															</div>
+															<div class="row">
+																<div class="col-sm-12">
+																	<input type="text" placeholder="Phone">
+																</div>
+															</div>
+															<div class="row">
+																<div class="col-sm-12">
+																	<input type="text" placeholder="Description">
+																</div>
+															</div>
+														</div>
+														<div class="rule"></div>
+														<div class="form-footer">
+															<div class="text-center"><a class="" id="register_button" type="submit" style="width: 100px;">SUBMIT</a></div>
+														</div>
+													</form>
+												</div>
+											</div> 
+										</div>
+									</div>
+
+									<!-- Modal footer -->
+									<div class="modal-footer">
+										<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<!---GIVE VISITING CARD MODAL--->
+					<!-- The Modal -->
+					<div class="modal fade" id="give-vcard" >
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content">
+
+								<!-- Modal Header -->
+								<div class="modal-header">
+									<h4 class="modal-title">Give V-card</h4>
+									<button type="button" class="close" data-dismiss="modal">&times;</button>
+								</div>
+
+								<!-- Modal body -->
+								<div class="modal-body" style="display: flex; justify-content: center;">  
+									<div class="container-fluid">
+
+										<div class="business-card">
+											<div class="content">
+												<div class="top" style="display: flex; justify-content: space-around;">
+													<div>
+														<div class="name">Gaurav Jaiswal</div>
+														<div class="profession">Front end developer</div>
+													</div>
+													<img  class="img-responsive img-thumbnail" src="https://placeimg.com/640/480/animals" alt="" style="max-width: 25%;">
+												</div>
+
+												<div class="bottom">
+													<div class="left">
+														<div class="email">gauravjaiswal@gmail.com</div>
+														<div class="phone">+91 9810436458</div>
+														<div class="website">gauravjaiswal@gmail.com</div>
+														<div>  
+														</div>
+
+
+														<form>
+															<h4>contact by</h4>
+															<label class="checkbox-inline">
+																<input type="checkbox" value="">Phone
+															</label>
+															<label class="checkbox-inline">
+																<input type="checkbox" value="">Email
+															</label>
+
+														</form>
+
+														<div class="form-group">
+															<textarea class="form-control" rows="1" id="comment" placeholder="comment"></textarea>
+														</div>
+														<a class="btn btn-warning" href="" title="">SUBMIT</a>
+
+													</div>
+													<div class="right">
+														<div class="location">New Delhi, India</div>
+													</div>
+												</div>
+											</div>
+											<div class="background">
+												<div class="slice"></div>
+											</div>
+										</div>
+
+									</div> 
+								</div>
+							</div>
+
+							<!-- Modal footer -->
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							</div>
+
+						</div>
+					</div>
+
+					<!---GIVE VISITING CARD MODAL END--->
+
+
+					<!-----TAKE VISITING CARD ----->
+					<!-- The Modal -->
+					<div class="modal fade" id="take-vcard">
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content">
+
+								<!-- Modal Header -->
+								<div class="modal-header ">
+									<h4 class="modal-title text-white">TAKE V-CARD</h4>
+									<button type="button" class="close" data-dismiss="modal">&times;</button>
+								</div>
+
+								<!-- Modal body -->
+								<div class="modal-body">  
+									<div class="container-fluid">
+										<div class="row">
+											<div class="col-sm-12">
+												<!--table-->
+												<div class="table-responsive">
+													<table class="table  text-center table-bordered">            
+														<thead class="thead-dark">
+															<tr>
+
+																<th>Name</th>
+																<th>Designation</th>
+																<th>Contact</th>
+																<th>Address</th>  
+																<th>Logo</th>
+																<th>Action</th>                      
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td>BALASUBRAMANIAN</td>
+																<td>MD & FOUNDER</td>
+																<td>9789095247</td>
+																<td >#2/964, RAJESHWARI NAGAR, 2ND STREET,S.KOLATHUR, (OPP TO MPL FORD COMPANY), MADIPAKKAM, CHENNAI - 600 091. (LAND MARK : KAMATCHI HOSPITAL)</td>
+																<td><img class="imgusrst img-circle shadow" src="images/showcase_sq.png" alt="Demo_logo" / style="width: 80px;">
+																</td>
+																<td><div class="text-center"><a class="" id="register_button" type="submit" style="width: 110px;">Download</a></div></td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+
+										<!--second row-->
+
+										<div class="row">
+											<div class="col-sm-12">
+												<!--table-->
+												<div class="table-responsive">
+													<table class="table text-center table-bordered">            
+														<thead class="thead-dark">
+															<tr>
+																<th>Name</th>
+																<th>Designation</th>
+																<th>Contact</th>
+																<th>Address</th>  
+																<th>Logo</th>
+																<th>Action</th>                      
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td>SWATHY</td>
+																<td>MARKETING TEAM</td>
+																<td>7402327000</td>
+																<td >4TH FLOOR, SHIVANGI APARTMENT, NEAR BUS STAND, ERODE-638003</td>
+																<td><img class="imgusrst img-circle shadow" src="images/showcase_sq.png" alt="Demo_logo" / style="width: 80px;">
+																</td>
+																<td><div class="text-center"><a class="" id="register_button" type="submit" style="width: 110px;">Download</a></div></td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+
+									</div>
+									<!---table end-->
+								</div> 
+							</div>
+						</div>
+						<!-- Modal footer -->
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+					<!----TAKE VISITING CARD  END--->
+
+
+				</body>
+
+				<!--booth owl carousel-->
+				<script>
+					$(document).ready(function() {
+						$('.owl-carousel').owlCarousel({
+							loop: true,
+							margin: 10,
+							responsiveClass: true,
+							merge:true,
+							singleItem:true,
+							dots:true,
+							autoplay: true,
+							autoplayHoverPause:true,
+							autoplayTimeout: 3000,
+							responsive: {
+								0: {
+									items: 1,
+									nav: true
+								},
+								600: {
+									items:1,
+									nav: true
+								},
+								1000: {
+									items: 4,
+									nav: true,
+									loop: true,
+									margin: 2
+								}
+							}
+						})
+					})
+				</script>
+				<!--booth owl carousel end-->
+
+				<!--left side social icons toggle-->
+				<script>
+					$(document).ready(function(){
+						$('#s-icons').click(function() {
+							$('.navbar-nav').toggleClass("show");
+						});
+					});
+				</script>
+				<!--left side social icons toggle end-->
+
+				<!--diamond, gold script--->
+				<script>
+					$(document).ready(function(){
+						$('#gold, #new-arrival, #product-slider, #sponsor').owlCarousel({
+							loop:true,
+							margin:10,
+							items:1,
+							responsiveClass:true,
+							autoplayHoverPause:true,
+							autoplayTimeout: 8000,
+							mouseDrag:true,
+							touchDrag:true,
+						})
+					});
+				</script>
+
+
+
+				</html>

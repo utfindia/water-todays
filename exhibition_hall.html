@@ -1,0 +1,250 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="">
+		<style type="text/css" media="screen">
+			* {
+				box-sizing: border-box;
+				padding: 0;
+				margin: 0;
+			}
+
+
+			body {
+				background: url(images/hall1.jpg);
+				background-size: 100vw 100vh;
+			}
+
+			.navbar-brand > img {
+				max-height: 100%;
+				height: 100%;
+				-o-object-fit: contain;
+				object-fit: contain;			
+			}
+
+			/*Navbar style*/
+
+			.navbar.navbar-inverse {
+				padding: 0px 0px;
+			}
+
+			.navbar .navbar-brand img {
+				max-width: 80px;
+			}
+
+			.navbar-brand {
+				margin: 0;
+				padding: 0px 0px ;
+
+			}
+
+			.navbar > .container-fluid .navbar-brand {
+				margin-left: 52px;
+			}
+
+			.nav>li {
+
+				background-color: #4a8bff;
+				margin: 1px 10px 1px 11px;
+				padding: 0px 5px 0px 6px;
+				color: #fff;
+			}
+
+/*.navbar-nav li {
+	display: inline-block;
+	margin-right: 50px;
+	position: relative;
+	} */
+
+	.navbar-nav li>a {
+		display: block;
+		padding-bottom: 5px;
+		padding-top: 5px;
+		font-size: 12px;
+		font-weight: 400;
+		text-transform: uppercase;
+		color: #fff;
+		color: white!important;
+	}
+
+	.navbar .dropdown-menu a {
+		color: black!important;
+	}
+
+	.collapse.navbar-collapse {
+		margin-top: 10px;
+	}
+
+
+	/******top banner style*******/
+	.banner {
+		position: absolute;
+		top: 0vh;
+		left: 6vw;
+	}
+
+	.banner img {
+		max-width: 100%;
+	}
+
+
+	/** door board style***/
+	.door-title {
+		background: #1b1562;
+		background-size: contain;
+		text-align: center;
+		padding: 6px 9px;
+		color: white;
+		font-size: 11px;
+		border-radius: 20px;
+	}
+
+	.door1 {
+		position: absolute;
+		top: 29vh;
+		left: 15vw;
+		width: 170px;
+	}
+
+	.door2 {
+		position: absolute;
+		top: 28vh;
+		left: 13vw;
+		width: 140px;
+	}
+
+	.door3 {
+		position: absolute;
+		top: 28vh;
+		left: 3vw;
+		width: 140px;
+	}
+
+	.door4 {
+		position: absolute;
+		top: 28vh;
+		right: 8vw;
+		width: 140px;
+	}
+
+	.door5 {
+		position: absolute;
+		top: 28vh;;
+		left: 15vw;
+		width: 150px;
+	}
+
+	.door6 {
+		position: absolute;
+		top: 5vh;
+		right: 8vw;
+		width: 150px;
+	}
+
+	.button-group1 a, .button-group2 a, .button-group3 a {
+		display: block;
+		background: navy;
+		margin-bottom: 2px;
+		text-decoration: none;
+		text-align: center;
+		border-radius: 4px;
+		color: white;
+		width: 80%;	
+		padding: 2px;	
+	}
+
+	.city-names {
+		position: relative;
+		left: 33vw;
+	}
+
+
+
+
+
+
+</style>
+</head>
+<body>
+	<!--navbar section-->
+	<nav class="navbar  navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>                        
+				</button>
+				<a class="navbar-brand" href="#"><img class="img-responsive shadow" src="images/logo.png" alt="logo" style="border-radius: 50%;"></a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav navbar-right">
+					<li class=""><a href="javascript:void(0);">About us</a></li>
+					<li><a href="exhibition_hall.html">Exhibition</a></li>
+					<li><a href="auditorium.html">Conference</a></li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="">B2B Meeting 
+							<!--<span class="caret"></span></a>-->
+							<ul class="dropdown-menu">
+								<li><a href="#">Dashboard</a></li>
+								<li><a href="#">Profile</a></li>
+								<li><a href="#">Logout</a></li>
+							</ul>
+						</li>					
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!--navbar section end-->
+
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4" style="visibility: hidden;">
+					<a href="" title=""><h4 class="door-title door5"> Sample room 1</h4></a>
+				</div>
+
+				<div class="col-lg-4">
+					<div class="banner">
+						<img class="img-responsive" src="images/banner.png" alt="">
+					</div>				
+				</div>
+
+				<div class="col-lg-4" style="visibility: hidden;">
+					<a href="" title=""><h4 class="door-title door6"> Sample room 1</h4></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3">
+					<a href="" title=""><h4 class="door-title door1"> Room1</h4></a>
+				</div>
+
+				<div class="col-lg-3">
+					<a href="" title=""><h4 class="door-title door2"> Room2</h4></a>
+				</div>
+
+				<div class="col-lg-3">
+					<a href="" title=""><h4 class="door-title door3"> Room3</h4></a>
+				</div>
+
+				<div class="col-lg-3">
+					<a href="" title=""><h4 class="door-title door4"> Room4</h4></a>
+				</div>
+			</div>
+		</div>
+
+		<div style="position: fixed; bottom: 0px; right: 0px; background: red; color: white;
+		padding: 5px; border-radius: 10px 0px 0px 10px;">
+		<p>Please click on International Schools</p>
+
+	</body>
+	</html>
