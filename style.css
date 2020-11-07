@@ -924,11 +924,10 @@ padding:5px;
 
 
 .card {
-
 	position: relative !important;
 	display: inline-block !important;
-
 }
+
 .card .clr1 {
 	display: none ;
 	position: absolute !important;
@@ -942,7 +941,7 @@ padding:5px;
 
 
 .card:hover .clr1 {
-	display: none;
+	display: block!important;
 	/*width:110% !important;*/	
 	z-index: 99999999 !important;	
 	color: white;
