@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+	<!--font aweson-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!--owl carousel-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+	<!--owl carousel end--->
+	<link rel="stylesheet" href="booth_old.css">
+	<link rel="stylesheet" type="text/css" href="popupscreen2.css">
+	<style>
+		* {
+			box-sizing: border-box;
+			padding: 0;
+			margin: 0;
+		}
+
+		.navbar-brand > img {
+			max-height: 100%;
+			height: 100%;
+			-o-object-fit: contain;
+			object-fit: contain;			
+		}
+
+		/*Navbar style*/
+
+		.navbar.navbar-inverse {
+			padding: 0px 0px;
+		}
+
+		.navbar .navbar-brand img {
+			max-width: 80px;
+		}
+
+		.navbar-brand {
+			margin: 0;
+			padding: 0px 0px ;
+
+		}
+
+		.navbar > .container-fluid .navbar-brand {
+			margin-left: 52px;
+		}
+
+		.nav>li {
+
+			background-color: #4a8bff;
+			margin: 1px 10px 1px 11px;
+			padding: 0px 5px 0px 6px;
+			color: #fff;
+		}
+
+/*.navbar-nav li {
+	display: inline-block;
+	margin-right: 50px;
+	position: relative;
+	} */
+
+	.navbar-nav li>a {
+		display: block;
+		padding-bottom: 5px;
+		padding-top: 5px;
+		font-size: 12px;
+		font-weight: 400;
+		text-transform: uppercase;
+		color: #fff;
+		color: white!important;
+	}
+
+	.navbar .dropdown-menu a {
+		color: black!important;
+	}
+
+	.collapse.navbar-collapse {
+		margin-top: 10px;
+	}
+
+
+	.top_logo img {
+		width: 50px;
+	}
+
+	h2.title {
+		background: lightgrey;
+		color: white;
+		border: 4px solid grey;
+		width: 30vw;
+		text-align: center;
+		margin: auto;
+	}
+
+	.banner {
+		width: 20vw;
+		margin: 10px auto;
+	}
+
+
+	/***new marquee style***/
+	.marquee-container {
+		width: 18em;
+		height: 22rem;
+		margin: 1em auto;
+		overflow: hidden;
+		/*background: white;*/
+		position: relative;
+		box-sizing: border-box;
+	}
+
+	.marquee {
+		top: 6em;
+		position: relative;
+		box-sizing: border-box;
+		animation: marquee 15s linear infinite;
+	}
+
+	.marquee:hover {
+		animation-play-state: paused;
+	}
+
+	/* Make it move! */
+	@keyframes marquee {
+		0%   { top:   8em }
+		100% { top: -11em }
+	}
+
+	@keyframes marquee {
+		0%   { top:   2em }
+		100% { top: -28em }
+	}
+
+	/* Make it look pretty */
+	.microsoft .marquee {
+		margin: 0;
+		padding: 0 1em;
+		padding: 0 0.1em;
+		line-height: 1.5em;
+		font: 1em 'Segoe UI', Tahoma, Helvetica, Sans-Serif;
+	}
+
+	.microsoft:before, .microsoft::before,
+	.microsoft:after,  .microsoft::after {
+		left: 0;
+		z-index: 1;
+		content: '';
+		position: absolute;
+		pointer-events: none;
+		width: 100%; height: 2em;
+		background-image: linear-gradient(top, #FFF, rgba(255,255,255,0));
+	}
+
+	.microsoft:after, .microsoft::after {
+		bottom: 0;
+		transform: rotate(180deg);
+	}
+
+	.microsoft:before, .microsoft::before {
+		top: 0;
+	}
+
+
+	/** bottomm section banners, videos and sliders***/
+
+	.left-banner img , .right-banner img {
+		width:8vw;
+		height: 46vh;
+		transition: all .5s ease;
+	}
+
+	.left-banner img:hover , .right-banner img:hover {
+		-ms-transform: scale(1.5); /* IE 9 */
+		-webkit-transform: scale(1.5); /* Safari 3-8 */
+		transform: scale(1.5);		
+	}
+
+	.left-banner {
+		position: absolute;
+		left: 2vw;
+		top: 16vh;
+	}
+
+	.right-banner {
+		position: absolute;
+		right: 2vw;
+		top: 16vh;
+	}
+
+	.left-video iframe {		
+		width: 12vw;
+		position: absolute;
+		left: -5vw;
+		top: 5vh;		
+		height: 13vh;
+	}
+
+	.right-video iframe {		
+		width: 12vw;
+		position: absolute;
+		right: -14vw;
+		height: 13vh;
+		top: 5vh;
+	}
+
+
+	.booth-container {		
+		height: 120vh;		
+		background-image: url(images/old_booth.png);
+		background-repeat: no-repeat;
+		background-size: 100vw 1080px;
+		background-size: 100vw 100vh;
+		background-size: cover;
+		margin-top: 1rem;
+	}
+
+
+	/***cover image****/
+	.cover-image  {
+		
+		background-image: url(images/water.jpg);
+		background-repeat: no-repeat;		
+		margin: 20px 10px;
+		background-size: cover;
+		background-position: 0px  -300px;
+		border-radius: 20px;
+		background: rgba(url(images/cover.jpeg), 0,0,0,0.5);
+
+
+	}
+
+
+	.cover-image img {
+		width:32vw;
+		padding: 2vw;
+		text-align: center;
+		margin: 20px auto;
+	}
+
+
+
+	/*top left list style of collapse*/
+	@media (min-width: 768px) {
+		.collapse.dont-collapse-sm {
+			display: block;
+			height: auto !important;
+			visibility: visible;
+		}
+	}
+
+
+	/*left banner list style*/
+	.exhibition-details li {
+		list-style: none;
+		background: white;
+		margin-bottom: 8px;
+		padding: 2px;
+		transition: all .1s ease;
+		border-radius: 3px;
+		width: 150px;
+		text-align: center;
+	}
+
+	.exhibition-details li:hover {
+		transform: scale(1.1);
+	}
+
+	.exhibition-details li a {
+		text-decoration: none;
+		color: black;
+	}
+
+
+	.booth-banner h2 {
+		margin-top: 50px;
+	}
+
+	.you_tubee {
+		position: relative;
+		top: 8vh;
+		left: -23vw;
+		margin: 0px auto;
+		z-index: 1;
+	}
+
+	.gold_sponser {
+		position: relative;
+		right: 6vw;
+		top: 14rem;
+	}
+
+	.products {
+		position: relative;
+		top: 14rem;
+		left: 7vw;
+		margin: 0 auto;
+	}
+
+</style>
+
+
+</head>
+<body  >
+
+	<!--navbar section-->
+	<nav class="navbar  navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>                        
+				</button>
+				<a class="navbar-brand" href="#"><img class="img-responsive shadow" src="images/logo.png" alt="logo" style="border-radius: 50%;"></a>
+			</div>
+
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav navbar-right">
+					<li class=""><a href="javascript:void(0);">About us</a></li>
+					<li><a href="exhibition_hall.html">Exhibition</a></li>
+					<li><a href="auditorium.html">Conference</a></li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="">B2B Meeting 
+							<!--<span class="caret"></span></a>-->
+							<ul class="dropdown-menu">
+								<li><a href="#">Dashboard</a></li>
+								<li><a href="#">Profile</a></li>
+								<li><a href="#">Logout</a></li>
+							</ul>
+						</li>					
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!--navbar section end-->
+
+		<!--cover image section--->
+		<div class="container-fluid" >
+			<div class="row cover-image">
+				<div class="col-lg-3">
+					<div id="hanging-banner" style="margin: 40px 30px;">
+						<div class="exhibition-details" style="">
+							<button class="btn btn-primary hidden visible-xs" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+								Menu
+							</button>
+							<div class="collapse dont-collapse-sm" id="collapseExample">
+								<div class="">
+
+									<h5></h5>
+									<ul >
+										<li class=""><a title="" href="e_showcase1.html" target="_new">E-showcase</a></li>
+										<li><a href="announcement.html" title="">Announcement</a></li>
+										<li><a href="" title="" data-toggle="modal" data-target="#appointment">Appointment</a></li>
+
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-6" >
+					<img class="img-responsive" src="images/banner.png" alt="">
+				</div>	
+
+				<div class="col-lg-3">
+					<div id="hanging-banner" style="margin: 40px 30px;">
+						<div class="exhibition-details" style="">
+							<button class="btn btn-primary hidden visible-xs" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+								Menu
+							</button>
+							<div class="collapse dont-collapse-sm" id="collapseExample">
+								<div class="">
+
+									<h5></h5>
+									<ul >									
+										<li><a href="" title="" data-toggle="modal" data-target="#feedback">feedback</a></li>
+										<li><a href="" title="" data-toggle="modal" data-target="#give-vcard">Give V-card</a></li>
+										<li><a href="" title="" data-toggle="modal" data-target="#take-vcard">Take V-card</a></li>									
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!--cover  image section end--->
+
+		<div class="booth-container" id ="booth-container"> <!---booth container start-->
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3">
+						<div class="top_logo left">
+							<img src="images/food_universe.jpeg" alt="">
+						</div>
+					</div>
+
+					<div class="col-lg-6">
+						<!--booth banner and title-->
+						<div class="booth-banner">
+							<h2 class="title">Company Fascia Name</h2>
+							<img class="img-responsive banner" src="images/banner.jpg" alt="" style="visibility: hidden;">
+						</div>
+					</div>
+
+					<div class="col-lg-3">
+						<div class="top_logo right">
+							<img src="images/food_universe.jpeg" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<!---middle section of two banners, two video  screens and two sliders--->
+
+			<div class="container-fluid">
+				<div class="row">
+					<!--left part--->
+					<div class="col-lg-2">
+						<div class="left-banner">
+							<img class="img-responsive banner" src="images/c.png" alt="">
+						</div>
+					</div>
+
+					<div class="col-lg-2">
+						<div class="left-slider">
+							<div class="gold_sponser">  
+								<div class="gold_sponser_table">
+									<h1>PRODUCTS</h1>
+									<div id="gold-marquee" style="/*height:322px; */ overflow:hidden;">
+										<div class="microsoft marquee-container">
+											<div class="marquee">
+												<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+												<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+												<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+												<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+												<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+												<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+											</div>
+										</div>
+									</div>
+
+
+								</div>
+							</div><!-- Gold Sponser end -->
+						</div>
+					</div>
+
+					<div class="col-lg-2">
+						<div class="left-video" style="display: none;">
+							<div class="you_tubee"><!-- announcement start -->
+								<div style="">
+									<iframe  style=" border: 5px solid black; display: block; margin: auto;" src="https://www.youtube.com/embed/2Jyml96z0mU" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+								</div>
+							</div><!-- announcement end -->
+						</div>
+					</div>
+
+					<!--right part-->
+
+					<div class="col-lg-2">
+						<div class="right-video">
+							<div class="you_tubee"><!-- announcement start -->
+								<div style="">
+									<iframe  style=" border: 5px solid black; display: block; margin: auto;" src="https://www.youtube.com/embed/2Jyml96z0mU" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+								</div>
+							</div><!-- announcement end -->
+						</div>
+					</div>
+
+					<div class="col-lg-2">
+						<div class="right-slider">
+							<div class="products"><!-- products start -->
+								<h1>PRODUCTS </h1>
+								<div id="product-marquee" style="height:204x; overflow:hidden;">
+									<div class="microsoft marquee-container">
+										<div class="marquee">
+											<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+											<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+											<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+											<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+											<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+											<div class="gold_sponser_table_01"><img src="images\logo.png"></div>
+										</div>
+									</div>
+								</div>
+
+
+							</div><!-- products end -->
+						</div>
+					</div>
+
+					<div class="col-lg-2">
+						<div class="right-banner">
+							<img class="img-responsive banner" src="images/d.png" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--booth container end-->
+
+
+			<!--right side skype and whatsapp  <div class="facebookflat"><img src="images\ss1.png"></div> -->
+			<div id="fixedsocial" style="visibility: hidden;">			
+				<div class="twitterflat"><img src="images\ss2.png"></div> 
+				<div class="twitterflat"><img src="images\ss3.png"></div> 
+			</div>
+			<!--right side skype and whatsapp end-->
+
+
+			
+		</body>
+		<script>
+			$(document).ready(function(){
+				$(function() {
+					$(document).scrollTop( $("#booth-container").offset().top );  
+				});
+			});
+		</script>
+		</html>

@@ -1,0 +1,639 @@
+body {
+	background-image: url(images/booth5C.png);
+	background-repeat: no-repeat;
+	background-size: 100vw 100vh;
+	background-position: center 600px;
+	background-position: center 15px;
+}
+
+@media screen and (max-width: 600px) {
+	body {
+		background: lightgrey;
+	}
+}
+
+
+
+/*************NAVBAR STYLE*************/
+.navbar-brand {
+	padding: 0px!important;
+}
+
+.navbar > .container-fluid .navbar-brand {
+	margin-left: 52px!important;
+}
+
+
+.nav>li {
+
+	background-color: #4a8bff;
+	margin: 10px 10px 1px 11px;
+	padding: 0px 5px 0px 6px;
+	color: #fff;
+}
+
+.navbar-nav li>a {
+	display: block;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	font-size: 12px;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: #fff;
+	color: white!important;
+}
+
+.navbar .dropdown-menu a {
+	color: black!important;
+}
+
+
+/*********TOP EXHIBITOR DETAILS**************/
+
+
+/*exhibitor style*/
+.solar_expo
+{
+	width: 100%;
+	height: auto;
+	
+	/*position: absolute;
+	z-index: 999;
+	margin: 0 auto;
+	left: 15%;
+	left: 0px;
+	right: 0;
+	top: 4%;
+	top: 0%;
+	margin-top: 1.5%;*/
+	padding:5px;
+	background-color: #f4f4f6;
+	border: 4px solid #666666;
+}
+
+.solar_expo:hovere {	
+	-ms-transform: scale(1.1); /* IE 9 */
+	-webkit-transform: scale(1.1); /* Safari 3-8 */
+	transform: scale(1.1); 
+	transition: transform .5s ease;
+}
+
+@media screen and (max-width: 600px) {
+	.solar_expo:hover {
+		transform: scale(1);
+	}
+}
+
+
+.solar_expo_main {
+	width: 100%;
+	height: auto;
+	/*float:left;*/
+	display: flex;
+	justify-content: space-around;
+
+}
+
+.solar_expo_main_right
+{
+	
+	height: auto;
+	/*float: right;
+width: 70%;
+*/
+
+background: white;
+padding: 10px 10px;
+background: #f4f4f6;
+
+}
+.solar_expo_main_right img
+{
+	width: 150px;
+
+}
+
+.solar_expo_main_left
+{
+	
+	height: auto;
+	/*float: left;
+	width:30%;*/
+	padding: 10px 10px;
+}
+
+.solar_expo_main_right p
+{
+	font-size: 14px;
+	color: #01112f;
+	line-height: 22px;
+}
+
+
+
+/*youtube*/
+#youtube {
+	margin-top: 4px;
+	margin-right: 0px;
+}
+
+@media screen and (max-width: 600px) {
+	#youtube {
+		margin: 0px;
+	}
+}
+
+
+.solar_expo, #youtube {
+	position: relative;
+	bottom: 14px;
+}
+
+@media screen and (max-width: 600px) {
+	.solar_expo, #youtube {
+		position: static;		
+	}
+
+	#hanging-banner {
+		margin-bottom: 10px;
+	}
+}
+
+.exhibitor-contact li {
+	list-style: none;
+	background: teal;
+	background: darkred;
+	margin-bottom: 4px;
+	border-radius: 10px;
+	padding: 4px 2px;
+	position: relative;
+	bottom: 6px;
+	color: white;
+}
+
+.exhibitor-contact li a {
+	color: white;
+}
+
+
+/*hanging red banner style*/
+
+#hanging-banner ul {			
+	/*position: absolute;
+	top: 0px; 
+	left: 180px;*/
+	margin-top: 34px;
+	margin-left: -9px;
+}
+
+@media screen and (max-width: 600px) {
+	#hanging-banner {
+		display: flex;
+		justify-content: center;
+	}
+
+	#hanging-banner ul {
+		margin-top: 0px;
+		padding: 0px;
+		margin-left: 0px;
+	}
+
+}
+
+#hanging-banner img {
+	/*width: 180px;
+	position: relative;*/
+	height: 320px;
+	transition: all .2s ease;
+}
+
+#hanging-banner img:hover {
+	transform: scale(1.1);
+}
+
+.exhibition-details {
+	/*position: absolute;
+	top: 103px;
+	left: -5px;*/
+}
+
+/*left banner list style*/
+.exhibition-details li {
+	list-style: none;
+	background: white;
+	margin-bottom: 3px;
+	padding: 2px;
+	transition: all .1s ease;
+	border-radius: 3px;
+	width: 150px;
+	text-align: center;
+}
+
+.exhibition-details li:hover {
+	transform: scale(1.1);
+}
+
+.exhibition-details li a {
+	text-decoration: none;
+	color: black;
+}
+
+
+/*right red banner image style*/
+
+
+/*right side sponsor logo*/
+/*sponsor logo*/
+
+#sponsors-logo h5 {
+	/*position: relative;*/
+	margin: 3px 5px;
+	color: white;
+}
+
+
+#sponsors-logo img.red {
+	/*position: absolute;
+	top: 10px;
+	right: 330px;*/
+	transition: all .2s ease;
+}
+
+
+
+#sponsors-logo {
+	position: relative;
+	bottom: 15px;
+	/*position: absolute;
+	top: 35px;
+	right: 350px;*/
+	list-style-type: none;
+	margin-left: 90px;
+
+	/*display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-image: url('images/banner3.png');
+	background-size: 130px 500px;
+	background-repeat: no-repeat;
+	background-position: 170px -5px;*/
+}
+
+#sponsors-logo div img {
+	width: 80px;
+	transition: all .2s ease;			
+}
+
+#sponsors-logo div img:hover {
+	width: 80px;
+	transform: scale(1.1);			
+}
+
+#sponsors-logo div {
+	margin-bottom: 4px;
+}
+
+@media screen and (max-width: 600px) {
+	#sponsors-logo .new-arrival {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+
+	}
+
+	#sponsors-logo h5 {
+		color: black;
+		font-size: 18px;
+	}
+
+	#sponsors-logo {
+		position: static;
+		margin-left: 0px;		
+	}
+}
+
+/*product slider */
+
+.products {
+	width: 100%;
+	width:75%;
+	height: auto;
+	/*position: absolute;
+	z-index: 999;
+	margin: 0 auto;
+	left: 47%;
+	right: 0%;
+	top: 21.9%;*/
+	background-color:#1e56b7;
+	background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+	padding:5px;
+	border-top:2px solid #4889fd;
+}
+
+.products {
+	position: relative;
+	top: -18px;
+	left: 25%;
+	margin: 0 auto;
+	width: 75%;
+}
+
+@media screen and (max-width: 600px) {
+	.products {
+		position: static;
+		margin-bottom: 20px;
+		width: 100%;
+		width: 85%;
+	}
+}
+
+.products:hover {
+	-ms-transform: scale(1); /* IE 9 */
+	-webkit-transform: scale(1); /* Safari 3-8 */
+	transition: transform .5s ease;
+	transform: scale(1); 
+}
+
+@media screen and (max-width: 600px) {
+	.products:hover {
+		-ms-transform: scale(1); /* IE 9 */
+		-webkit-transform: scale(1); /* Safari 3-8 */
+		transform: scale(1); 
+		transition: transform .5s ease;
+	}
+}
+
+.products h1 {
+	font-size: 14px;
+	text-align: center;
+	color: #fcde48;
+	font-weight:bold;
+	margin-top: 13px;
+}
+
+.products p
+{
+	font-size: 14px;
+	color: #fff;
+	padding-left: 15px;
+	padding-right: 12px;
+	margin-top: -2px;
+}
+
+.products_img {
+	width: 100%;
+	height: auto;
+	float:left;
+}
+
+.products_img img {
+	width: 100%; 
+
+}
+
+#product-slider {
+	display: none;
+}
+
+@media screen and (max-width: 600px) {
+	#product-slider {
+		display: block;
+	}
+
+	#product-marquee {
+		display: none;
+	}
+}
+
+
+.gold_sponser_table_01
+{
+	width: 100%;
+	height: auto;
+	float:left;   
+	padding: 3px;
+}
+
+.gold_sponser_table_01 img {
+	width: 100%;
+}
+
+
+.gold_sponser_table_01:hover {
+	-ms-transform: scale(1.1); /* IE 9 */
+	-webkit-transform: scale(1.1); /* Safari 3-8 */
+	transform: scale(1.1); 
+	width: 100%;
+}
+
+/*auditorium start*/
+#auditorium {
+	position: relative;	
+	right: 60px;
+}
+
+@media screen and (max-width: 600px) {
+	#auditorium {
+		position: static;
+	}
+
+	#auditorium img {
+		width: 300px;		
+		margin: auto;
+		display: block;
+	}
+}
+
+#auditorium  img {
+	width: 300px;
+	/*transform: rotateX(10deg) rotateY(-60deg) rotateZ(-0deg);*/
+}
+
+/*auditorium end*/
+
+
+
+/*Bottom button style of briefcase, exhibitor,visitor etc*/
+/*button group style*/
+.span12.text-center.bottom-menu {
+
+	width: 53%;
+	height: auto;
+	position: fixed;
+	z-index: 999;
+	margin: 0 auto;
+	left: 3%;
+	right: 0%;
+	bottom: 2px;
+	border: 1px solid #8f9091;
+	background-color: hsla(258, 100%, 87%, 0.9);
+}
+
+@media screen and (max-width: 600px) {
+	.span12.text-center.bottom-menu {
+		position: static;
+		width: 100%;
+	}
+}
+
+.btn-group.animated.dropup button {
+	background: none;
+}
+
+
+.btn-group.animated > .btn {
+	transition: background-color 0.0625s cubic-bezier(0.28, 0, 0.99, -0.01);
+}
+.btn-group.animated > .btn:hover {
+	transition: background-color 0.0625s cubic-bezier(0.28, 0, 0.99, -0.01);
+}
+.btn-group.animated > .dropdown-menu {
+	width: 0;
+	/*min-width: 100%;
+	display: block;*/
+	overflow-y: hidden;
+	
+	top: 0;
+	z-index: -1;
+	transition: height 0.375s ease, width 0.375s ease, min-width 0.375s ease, opacity 0.125s ease 0.0625s, top 0.0625s ease 0.375s, bottom 1s ease 0.375s, z-index 1.375s ease;
+	opacity: 0;
+}
+.btn-group.animated > .dropdown-menu > li {
+	height: 0;
+	opacity: 0;
+	overflow: hidden;
+	transition: opacity 0.125s ease, height 0.375s ease;
+}
+.btn-group.animated.open {
+	z-index: 1000;
+}
+.btn-group.animated.open > .dropdown-menu {
+	top: 100%;
+	width: 100%;
+	min-width: 160px;
+	transition: all 0.25s ease;
+	opacity: 1;
+	z-index: 1000;
+}
+.btn-group.animated.open > .dropdown-menu > li {
+	height: 26px;
+	height: auto;
+	opacity: 1;
+	transition: all 0.25s ease;
+	text-align: center;
+	margin: 5px;
+}
+.btn-group.animated.dropup > .dropdown-menu {
+	top: auto;
+	bottom: 0;
+}
+.btn-group.animated.dropup.open > .dropdown-menu {
+	top: auto;
+	bottom: 100%;
+}
+
+.menu_round {
+	background-color:#0f3f93;
+	padding:15px;	
+	border:2px solid #fff;
+	border-radius: 50px;
+	color:#fff;
+}
+
+.menu_round:hover {
+	background-color:#ff9933;
+	padding:15px;	
+	border:2px solid #fff;
+	border-radius: 50px;
+	color:#fff;
+}
+
+/* button group style end*/
+
+
+
+/*right side skype and whatsapp style*/
+#fixedsocial {
+	top:40%;
+	/*height:200px;*/
+	width:60px;
+	position:fixed;
+	right: -9px;
+}
+
+.facebookflat {
+	background:url("http://placehold.it/50x50");
+	height:50px;
+	width:50px;
+	transition:ease 500ms;
+	background-size:50px;
+	opacity:1;
+}
+
+.facebookflat:hover {
+	background:url("http://placehold.it/50x50");
+	height:50px;
+	width:50px;
+	background-size:60px;
+	opacity:0.5;
+	transition:ease 500ms;
+	margin-left:-20px;
+	width:70px;
+
+}
+
+.twitterflat {
+	background:url("http://placehold.it/50x50");
+	height:50px;
+	width:50px;
+	transition:ease 500ms;
+	background-size:50px;
+	opacity:1;
+}
+
+.twitterflat:hover {
+	background:url("http://placehold.it/50x50");
+	height:50px;
+	width:50px;
+	background-size:60px;
+	opacity:0.5;
+	transition:ease 500ms;
+	margin-left:-20px;
+	width:70px;
+}
+
+
+@media screen and (max-width: 600px) {
+	.social-icons, #fixedsocial {
+		display: none;
+	}
+}
+
+
+@media screen and (max-width: 600px) {
+	#fixedsocial {
+		display: block;
+		position: static!important;
+		transition: none!important;
+		width:140px;
+		margin: 0px auto;
+	}
+
+	#fixedsocial > div {
+		display: inline ;
+	}
+
+	.facebookflat:hover, .twitterflat:hover {
+		background:url("http://placehold.it/50x50");
+		transition:none;
+		-webkit-transition-property: none!important;
+		-moz-transition-property:none!important;
+		-o-transition-property: none!important;
+		transition-property: none!important;
+		margin-left:0px;
+
+	}
+}
+
+
+
